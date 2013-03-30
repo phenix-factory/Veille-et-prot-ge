@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)]</title>
+	[<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
+	<INCLURE{fond=inclure/head} />
+</head>
+
+<body class="pas_surlignable page_sommaire">
+	<div class="page">
+		<INCLURE{fond=inclure/header, env}>
+		<div id="contenu">
+			<INCLURE{fond=inclure/navH, env}>
+			
+			<INCLURE{fond=inclure/patte, env}>
+			<div id="news">
+				<INCLURE{fond=inclure/news, env}>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		
+		<INCLURE{fond=inclure/footer, env}>
+	</div>
+</body>
+</html>
