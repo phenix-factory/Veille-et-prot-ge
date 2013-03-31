@@ -21,6 +21,10 @@ a:hover {
 	width: 980px;
 	background: url(img/background.png);
 	padding: 0;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
 }
 
 header {
@@ -177,7 +181,7 @@ input.text, textarea {
 	background: #FFF;
 	border: 1px #000 solid;
 	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	        border-radius: 5px;
 }
 
 input, textarea {
@@ -228,4 +232,12 @@ span.obligatoire {
 
 p.explication {
 	margin-bottom: 0;
-} 
+}
+
+#sponsor {
+    margin-top: 125px;
+    margin-left: 35px;
+}
+#sponsor h3 {
+    margin: 0;
+}
