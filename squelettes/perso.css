@@ -54,6 +54,14 @@ a {
   background: url(img/patte.png);
   width: 202px;
   height: 191px; }
+  #patte p {
+    color: #FFF;
+    position: absolute;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg); }
   #patte a {
     color: white; }
   #patte a:hover {
@@ -74,51 +82,24 @@ a {
     display: none;
     background: #FFF;
     z-index: 2;
-    width: 150px;
+    width: 250px;
     padding: 5px;
+    border: 1px solid #000;
     -webkit-border-radius: 5px;
     border-radius: 5px; }
   #patte #Sections {
     position: absolute;
     top: 15px;
-    left: 40px;
-    color: #FFF;
-    position: absolute;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg); }
+    left: 40px; }
   #patte #Photo {
     position: absolute;
     top: 95px;
-    left: 135px;
-    color: #FFF;
-    position: absolute;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg); }
+    left: 135px; }
   #patte #Contact {
     position: absolute;
     top: 150px;
-    left: 80px;
-    color: #FFF;
-    position: absolute;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg); }
+    left: 80px; }
   #patte #Club {
     position: absolute;
     top: 40px;
-    left: 125px;
-    color: #FFF;
-    position: absolute;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg); }
+    left: 125px; }

@@ -86,6 +86,10 @@ a {
     background: url(img/patte.png);
     width: 202px;
     height: 191px;
+    p {
+        @include patte_menu();
+    }
+
     a {
         color: $color_link_patte;
     }
@@ -119,9 +123,9 @@ a {
         display: none;
         background: #FFF;
         z-index: 2;
-        width: 150px;
+        width: 250px;
         padding: 5px;
-        @include radius();
+        @include border();
     }
 
     // Positionnement des éléments de la patte
@@ -129,27 +133,23 @@ a {
         position: absolute;
         top: 15px;
         left: 40px;
-        @include patte_menu();
     }
 
     #Photo {
         position: absolute;
         top: 95px;
         left: 135px;
-        @include patte_menu();
     }
 
     #Contact {
         position: absolute;
         top: 150px;
         left: 80px;
-        @include patte_menu();
     }
 
     #Club {
         position: absolute;
         top: 40px;
         left: 125px;
-        @include patte_menu();
     }
 }
