@@ -33,7 +33,7 @@ a {
   -webkit-border-radius: 5px;
   border-radius: 5px; }
 
-/* Barre de navigation */
+/* Barre de navigation principal */
 #nav {
   background: url(img/menuH.png) repeat-x;
   border: 1px solid #000;

@@ -53,7 +53,7 @@ a {
     @include radius();   
 }
 
-/* Barre de navigation */
+/* Barre de navigation principal */
 #nav {
     background: url(img/menuH.png) repeat-x;
     @include border();
