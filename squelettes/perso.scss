@@ -1,10 +1,18 @@
 // Variable
 $radius: 5px;
+$color_link: #136690;
+
 
 // Fonction
 @mixin radius() {
     -webkit-border-radius: $radius;
     border-radius: $radius;
+}
+
+
+/* Les liens généraux */
+a {
+    color: $color_link;
 }
 
 /* Positionnement de la page */
@@ -43,12 +51,17 @@ $radius: 5px;
 
 /* Barre de navigation */
 #nav {
+    background: url(img/menuH.png) repeat-x;
+    
     ul {
         width: 100%;
         max-width: 900px;
         margin: 0 auto;
+        text-align: center;
+    
         li {
             display: inline;
+            margin-right: 20px;
         }
     }
 }

@@ -1,3 +1,7 @@
+/* Les liens généraux */
+a {
+  color: #136690; }
+
 /* Positionnement de la page */
 #page {
   margin-top: 0;
@@ -30,9 +34,13 @@
   border-radius: 5px; }
 
 /* Barre de navigation */
-#nav ul {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto; }
-  #nav ul li {
-    display: inline; }
+#nav {
+  background: url(img/menuH.png) repeat-x; }
+  #nav ul {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center; }
+    #nav ul li {
+      display: inline;
+      margin-right: 20px; }
