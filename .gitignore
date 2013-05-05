@@ -8,3 +8,4 @@ local/
 .svn*
 snv*
 .DS_Store
+.htaccess
