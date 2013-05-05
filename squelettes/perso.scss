@@ -1,6 +1,12 @@
 /* Variable */
 $radius: 5px;
 
+/* Fonction */
+@mixin radius() {
+    -webkit-border-radius: $radius;
+            border-radius: $radius;
+}
+
 /* Positionnement de la page */
 #page {
     margin-top: 0;
@@ -31,6 +37,5 @@ $radius: 5px;
     right: 60px;
     background: rgba(255,255,255,0.5);
     z-index: 6;
-    -webkit-border-radius: $radius;
-            border-radius: $radius;
+    @include radius();   
 }
