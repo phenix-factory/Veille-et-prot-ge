@@ -6,21 +6,21 @@
 }
 
 #iview {
-	margin: 0 auto;
 	display: block; 
 	width: 100%;
 	height: 227px;
 	position: relative;
+    overflow: hidden;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
 }
 
 #iview .iviewSlider {
 	display: block;
 	width: 100%;
 	height: 227px;
-	-webkit-border-bottom-right-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	        border-bottom-right-radius: 5px;
-	        border-bottom-left-radius: 5px;
 }
 
 .iview-controlNav {
