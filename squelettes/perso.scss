@@ -1,7 +1,7 @@
-/* Variable */
+// Variable
 $radius: 5px;
 
-/* Fonction */
+// Fonction
 @mixin radius() {
     -webkit-border-radius: $radius;
             border-radius: $radius;
@@ -40,3 +40,5 @@ $radius: 5px;
     z-index: 6;
     @include radius();   
 }
+
+/* Barre de navigation */
