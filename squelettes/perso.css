@@ -35,7 +35,10 @@ a {
 
 /* Barre de navigation */
 #nav {
-  background: url(img/menuH.png) repeat-x; }
+  background: url(img/menuH.png) repeat-x;
+  border: 1px solid #000;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
   #nav ul {
     width: 100%;
     max-width: 900px;

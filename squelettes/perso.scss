@@ -8,6 +8,10 @@ $color_link: #136690;
     -webkit-border-radius: $radius;
     border-radius: $radius;
 }
+@mixin border() {
+    border: 1px solid #000;
+    @include radius();
+}
 
 
 /* Les liens généraux */
@@ -52,7 +56,7 @@ a {
 /* Barre de navigation */
 #nav {
     background: url(img/menuH.png) repeat-x;
-    
+    @include border();
     ul {
         width: 100%;
         max-width: 900px;
