@@ -30,3 +30,9 @@
   border-radius: 5px; }
 
 /* Barre de navigation */
+#nav ul {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto; }
+  #nav ul li {
+    display: inline; }
