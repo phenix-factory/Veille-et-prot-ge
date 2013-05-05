@@ -1,0 +1,10 @@
+<B_nav>
+<nav>
+	<ul>
+		<li><a href="#URL_SITE_SPIP">Accueil</a></li>
+		<BOUCLE_nav(ARTICLES) {id_rubrique=7} {par num titre, titre}>
+		<li[ class="(#EXPOSE)"]><a href="#URL_ARTICLE">#TITRE</a></li>
+		</BOUCLE_nav>
+	</ul>
+</nav>
+</B_nav>
