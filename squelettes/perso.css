@@ -18,7 +18,8 @@
 /* Entête du site */
 #entete {
   padding: 0;
-  position: relative; }
+  position: relative;
+  border: none; }
 
 /* Logo */
 #logo_vp {
