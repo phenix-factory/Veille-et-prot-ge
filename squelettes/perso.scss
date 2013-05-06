@@ -188,6 +188,11 @@ textarea {
     @include radius();
 }
 
+/* Contenu */
+#contenu-principal {
+    padding-top: 20px;
+}
+
 /* Mise en page des articles */
 article {
     display: block;

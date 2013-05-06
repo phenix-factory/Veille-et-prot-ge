@@ -136,6 +136,10 @@ textarea {
   -webkit-border-radius: 5px;
   border-radius: 5px; }
 
+/* Contenu */
+#contenu-principal {
+  padding-top: 20px; }
+
 /* Mise en page des articles */
 article {
   display: block;
