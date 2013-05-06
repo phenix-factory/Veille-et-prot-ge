@@ -1,0 +1,10 @@
+<B_alert>
+<div class="sticky">
+	<BOUCLE_alert(ARTICLES){id_mot=1}{0,5}{par date}{inverse}>
+	[<h1 class="#EDIT{titre}"><a href="#URL_ARTICLE">(#TITRE)</a></h1>]
+	
+	[(#TEXTE|image_reduire{640})]
+	</BOUCLE_alert>
+</div>
+</B_alert>
+<//B_alert>

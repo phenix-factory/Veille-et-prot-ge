@@ -1,0 +1,17 @@
+<BOUCLE_principale(ARTICLES) {id_article}>
+    [(#REM) On recherche un éventuel mot clé ]
+    <BOUCLE_chercher_mot(MOTS){id_article}{id_groupe=2}>
+        [(#SET{mot_cle, #ID_MOT})]
+    </BOUCLE_chercher_mot>
+
+    [(#GET{mot_cle}|oui) <INCLURE{fond=inclure/trombi, env, id_mot=#GET{mot_cle} }> ]
+    [(#GET{mot_cle}|non)
+    <article>
+        <h1 class="#EDIT{titre}"><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></h1>
+        [(#LOGO_ARTICLE|image_reduire{640})]
+        <div class="#EDIT{texte}">[(#TEXTE|image_reduire{640})]</div>
+
+        <INCLURE{fond=inclure/documents, env}>
+    </article>
+    ]
+</BOUCLE_principale>

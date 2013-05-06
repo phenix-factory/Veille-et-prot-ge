@@ -1,0 +1,23 @@
+<B_article_blog>
+[(#REM) Système d'alert VP ]
+<INCLURE{fond=inclure/alert, env}>
+
+#ANCRE_PAGINATION
+<BOUCLE_article_blog(ARTICLES){id_rubrique IN 3,4,6}{!id_mot=1}{par date} {inverse} {pagination 5}>
+<article>
+    [(#REM) On vérifie s'il y a des photos dans l'article. ]
+    [(#SET{doc_link, ''})]
+    <BOUCLE_test_doc(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}>
+        [(#COMPTEUR_BOUCLE|>{0}|oui) #SET{doc_link, oui}]
+    </BOUCLE_test_doc>
+    
+    <h1 class="#EDIT{titre}"><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></h1>
+
+    <div class="#EDIT{texte}">[(#TEXTE|image_reduire{640})]</div>
+    
+    [(#GET{doc_link}|oui) <a href="#URL_ARTICLE" title="#TITRE" class="right">Voir les photos</a> ]
+    <div class="clear"></div>
+</article>
+</BOUCLE_article_blog>
+[<p class="pagination">(#PAGINATION)</p>]
+</B_article_blog>
