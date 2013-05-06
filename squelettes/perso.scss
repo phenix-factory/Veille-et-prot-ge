@@ -29,6 +29,10 @@ a {
     color: $color_link;
 }
 
+.clear {
+    clear: both;
+}
+
 /* Positionnement de la page */
 #page {
     margin-top: 0;
@@ -236,6 +240,8 @@ article {
     color: #878787;
 }
 
-#partenaire {
-    height: 100px;
+@media only screen and (max-device-width: 480px) {
+    #patte {
+        display: none;
+    }
 }

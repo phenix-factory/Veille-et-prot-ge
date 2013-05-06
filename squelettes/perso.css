@@ -2,6 +2,9 @@
 a {
   color: #136690; }
 
+.clear {
+  clear: both; }
+
 /* Positionnement de la page */
 #page {
   margin-top: 0;
@@ -178,9 +181,6 @@ article {
   text-align: right;
   color: #878787; }
 
-#partenaire {
-  height: 100px; }
-
-#copy {
-  height: 20px;
-  width: 100%; }
+@media only screen and (max-device-width: 480px) {
+  #patte {
+    display: none; } }
