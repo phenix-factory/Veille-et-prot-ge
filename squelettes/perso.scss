@@ -48,6 +48,7 @@ a {
     border-top: none;
     margin-left: 5px;
     margin-right: 5px;
+    padding-bottom: 10px;
 }
 
 /* Entête du site */
@@ -238,6 +239,19 @@ article {
     padding-left: 30px;
     text-align: right;
     color: #878787;
+}
+
+/* Les galerie d'images */
+#documents_portfolio {
+    ul {
+        margin: 0;
+        list-style: none;
+        li {
+            float: left;
+            line-height: 0;
+            margin: 3px;
+        }
+    }
 }
 
 @media only screen and (max-device-width: 480px) {
