@@ -199,3 +199,15 @@ article {
 .obligatoire {
     color: #FF0000;
 }
+
+/* Système d'alert */
+#alert {
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 1px #FF0000 solid;
+    @include radius();
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
