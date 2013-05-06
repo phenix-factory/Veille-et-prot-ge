@@ -12,7 +12,7 @@
     </BOUCLE_test_doc>
     
     <h1 class="#EDIT{titre}"><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></h1>
-    
+    [(#LOGO_ARTICLE|image_reduire{696})]
     <div class="#EDIT{texte}">[(#TEXTE|image_reduire{640})]</div>
     
     [(#GET{doc_link}|oui) <a href="#URL_ARTICLE" title="#TITRE" class="right">Voir les photos</a> ]
