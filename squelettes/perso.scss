@@ -223,15 +223,19 @@ article {
     background: none;
 }
 
-#pied p.citation {
-    background: url(img/citation.png) no-repeat center;
-    font-size: 24px;
+#pied .citation {
     width: 477px;
     height: 156px;
-    text-align: right;
-    color: #878787;
-    margin: 0;
-    margin-left: 380px;
+    float: right;
+    background: url(img/citation.png) no-repeat right;
+    font-size: 1.4em;
     padding-top: 50px;
     padding-right: 160px;
+    padding-left: 30px;
+    text-align: right;
+    color: #878787;
+}
+
+#partenaire {
+    height: 100px;
 }
