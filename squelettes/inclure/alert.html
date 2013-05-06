@@ -1,9 +1,11 @@
 <B_alert>
-<div class="sticky">
+<div id="alert" class="row">
 	<BOUCLE_alert(ARTICLES){id_mot=1}{0,5}{par date}{inverse}>
-	[<h1 class="#EDIT{titre}"><a href="#URL_ARTICLE">(#TITRE)</a></h1>]
-	
-	[(#TEXTE|image_reduire{640})]
+    <div class="large-[(#VAL{12}|div{#TOTAL_BOUCLE})] columns">
+    [<h1 class="#EDIT{titre}"><a href="#URL_ARTICLE">(#TITRE)</a></h1>]
+    	
+	[(#INTRODUCTION)]
+    </div>    
 	</BOUCLE_alert>
 </div>
 </B_alert>
