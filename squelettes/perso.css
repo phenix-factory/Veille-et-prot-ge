@@ -132,10 +132,16 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea {
-  margin: 0; }
+  margin: 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
 
 /* Mise en page des articles */
 article {
   display: block;
   clear: both;
   margin-bottom: 10px; }
+
+/* Formulaire Obligatoire. */
+.obligatoire {
+  color: #FF0000; }
