@@ -254,6 +254,10 @@ article {
     }
 }
 
+a.spip_out, a.spip_glossaire {
+    background: none;
+}
+
 @media only screen and (max-device-width: 480px) {
     #patte {
         display: none;
