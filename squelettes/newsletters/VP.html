@@ -167,12 +167,12 @@
                                                         [<div class="date">(#DATE|affdate)</div>]
                                                                                                                                             
 														<h2 class="#EDIT{titre} h2" style="color: #202020;display: block;font-family: Arial;font-size: 26px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;text-align: left;">
-															[(#LOGO_ARTICLE|image_reduire{100,200}
-																 |inserer_attribut{alt,''}
-															     |inserer_attribut{border,'0'}
-															     |inserer_attribut{style,'margin: 0;margin-left: 1em;margin-bottom: 1em;float:right;padding: 0;max-width: 100%;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;'}
-															     |inserer_attribut{class,logo})]
 															#TITRE</h2>
+                                                        [(#LOGO_ARTICLE|image_reduire{560}
+                                                                 |inserer_attribut{alt,''}
+                                                                 |inserer_attribut{border,'0'}
+                                                                 |inserer_attribut{style,'margin: 0;padding: 0;max-width: 100%;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;'}
+                                                                 |inserer_attribut{class,logo})]                                             
 														[<div class="#EDIT{texte}">
                                                         (#TEXTE
                                                                 |couper{250}
