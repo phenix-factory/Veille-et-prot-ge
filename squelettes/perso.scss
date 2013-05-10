@@ -212,6 +212,10 @@ textarea {
         a.right {
             font-size: 0.8em;
         }
+        #flash {
+            color: #b11b15;
+            font-size: 1.2em;
+        }
     }
 }
 
@@ -222,7 +226,6 @@ textarea {
 /* Mise en page des articles */
 article {
     display: block;
-    clear: both;
     margin-bottom: 10px;
 }
 

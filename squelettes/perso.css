@@ -150,6 +150,9 @@ textarea {
   font-size: 0.8em; }
 .page_sommaire #alert a.right {
   font-size: 0.8em; }
+.page_sommaire #alert #flash {
+  color: #b11b15;
+  font-size: 1.2em; }
 
 #news {
   margin-top: 10px; }
@@ -157,7 +160,6 @@ textarea {
 /* Mise en page des articles */
 article {
   display: block;
-  clear: both;
   margin-bottom: 10px; }
 
 /* Formulaire Obligatoire. */

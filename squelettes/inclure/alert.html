@@ -1,5 +1,6 @@
 <B_alert>
 <div id="alert" class="row">
+    <h1 id="flash" class="large-12 columns">News Flash !</h1>
 	<BOUCLE_alert(ARTICLES){id_mot=1}{0,3}{par date}{inverse}>
     <div class="large-[(#VAL{12}|div{#TOTAL_BOUCLE})] columns">
         [<h1 class="#EDIT{titre}"><a href="#URL_ARTICLE">(#TITRE)</a></h1>]
