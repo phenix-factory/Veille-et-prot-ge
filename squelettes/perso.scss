@@ -198,6 +198,27 @@ textarea {
     padding-top: 20px;
 }
 
+.page_sommaire {
+    h1 {
+        font-size: 1em;
+    }
+
+    #news {
+        a.right {
+            font-size: 0.8em;
+        }
+    }
+    #alert {
+        a.right {
+            font-size: 0.8em;
+        }
+    }
+}
+
+#news {
+    margin-top: 10px;
+}
+
 /* Mise en page des articles */
 article {
     display: block;

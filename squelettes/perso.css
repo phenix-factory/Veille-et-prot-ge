@@ -144,6 +144,16 @@ textarea {
 #contenu-principal {
   padding-top: 20px; }
 
+.page_sommaire h1 {
+  font-size: 1em; }
+.page_sommaire #news a.right {
+  font-size: 0.8em; }
+.page_sommaire #alert a.right {
+  font-size: 0.8em; }
+
+#news {
+  margin-top: 10px; }
+
 /* Mise en page des articles */
 article {
   display: block;
