@@ -4,8 +4,8 @@
 	<BOUCLE_alert(ARTICLES){id_mot=1}{0,3}{par date}{inverse}>
     <div class="large-[(#VAL{12}|div{#TOTAL_BOUCLE})] columns">
         [<h1 class="#EDIT{titre}"><a href="#URL_ARTICLE">(#TITRE)</a></h1>]
-        [(#LOGO_ARTICLE|image_reduire{200,200})]
-        [(#INTRODUCTION{300})]
+        [(#LOGO_ARTICLE|image_reduire{320,200})]
+        [(#INTRODUCTION{200})]
         [<a href="(#URL_ARTICLE)" titre="#TITRE" class="right">Lire la suite</a>]
     </div>    
     </BOUCLE_alert>
