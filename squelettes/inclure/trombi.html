@@ -1,13 +1,14 @@
 <B_comite>
 <div class="row">
     <BOUCLE_comite(AUTEURS){id_mot}{par nom}>
-    <div class="large-4 columns [(#COMPTEUR_BOUCLE|alterner{'', '', '', clear})]">
+    <div class="large-4 columns">
         [<a href="[(#LOGO_AUTEUR|extraire_attribut{src})]" title="#NOM" class="mediabox">
             (#LOGO_AUTEUR|image_passe_partout{120, 164}|image_recadre{120, 164}|vider_attribut{class}|centrer)
         </a>]
         [<h2>(#NOM|centrer)</h2>]
         [(#BIO|centrer)]
     </div>
+    [(#COMPTEUR_BOUCLE|alterner{'', '', <div class="clear"></div>})]
     </BOUCLE_comite>
 </div>
 </B_comite>
