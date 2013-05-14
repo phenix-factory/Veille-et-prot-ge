@@ -1,6 +1,8 @@
 <B_article_blog>
+
 [(#REM) Système d'alert VP ]
 <INCLURE{fond=inclure/alert, env}>
+
 <div id="news" class="row">
     #ANCRE_PAGINATION
     <BOUCLE_article_blog(ARTICLES){id_rubrique IN 3,4,6}{!id_mot=1}{par date} {inverse} {pagination 6}>
@@ -13,7 +15,7 @@
 
         <article>
             <h1 class="#EDIT{titre}"><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></h1>
-            [(#LOGO_ARTICLE|image_reduire{200,200})]
+            [(#LOGO_ARTICLE|image_passe_partout{200,100}|image_recadre{200,100})]
 
             <div class="#EDIT{texte}">[(#INTRODUCTION{350})]</div>
 
