@@ -2,11 +2,20 @@
 <div id="alert" class="row">
     <h1 id="flash" class="large-12 columns">News Flash !</h1>
 	<BOUCLE_alert(ARTICLES){id_mot=1}{0,3}{par date}{inverse}>
+    
+    [(#REM) On vérifie s'il y a des photos dans l'article. ]
+    [(#SET{doc_link, ''})]
+    <BOUCLE_test_doc(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}>
+    [(#COMPTEUR_BOUCLE|>{0}|oui) #SET{doc_link, oui}]
+    </BOUCLE_test_doc>
+       
     <div class="large-[(#VAL{12}|div{#TOTAL_BOUCLE})] columns">
         [<h1 class="#EDIT{titre}"><a href="#URL_ARTICLE">(#TITRE)</a></h1>]
         [(#LOGO_ARTICLE|image_passe_partout{320,160}|image_recadre{320,160})]
+        
         [(#INTRODUCTION{200})]
-        [<a href="(#URL_ARTICLE)" titre="#TITRE" class="right">Lire la suite</a>]
+        
+        [<a href="(#URL_ARTICLE)" title="#TITRE" class="right">Lire la suite[ (#GET{doc_link}|oui) et voir les photos]</a>]
     </div>    
     </BOUCLE_alert>
 </div>
