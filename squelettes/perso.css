@@ -203,9 +203,6 @@ article {
     line-height: 0;
     margin: 3px; }
 
-a.spip_out, a.spip_glossaire {
-  background: none; }
-
 @media only screen and (max-device-width: 480px) {
   #patte {
     display: none; } }
