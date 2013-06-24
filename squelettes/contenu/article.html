@@ -9,7 +9,7 @@
     <article>
         <h1 class="#EDIT{titre}"><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></h1>
         [(#LOGO_ARTICLE|image_reduire{696})]
-        <div class="#EDIT{texte}">[(#TEXTE|image_reduire{696})]</div>
+        <div class="#EDIT{texte}">[(#TEXTE|image_reduire{696}|vider_attribut{width}|vider_attribut{height})]</div>
 
         <INCLURE{fond=inclure/documents, env}>
     </article>
