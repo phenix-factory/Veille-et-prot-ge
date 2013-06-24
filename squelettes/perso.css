@@ -203,6 +203,10 @@ article {
     line-height: 0;
     margin: 3px; }
 
+/* Logo SPIP */
+.spip_logos {
+  margin-bottom: 20px; }
+
 @media only screen and (max-device-width: 480px) {
   #patte {
     display: none; } }
