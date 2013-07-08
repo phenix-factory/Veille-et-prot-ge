@@ -1,3 +1,10 @@
+[(#REM) 
+    Note Didier: 
+    On place le fichier perso.css à la FIN après les CSS de la balise #INSERT_HEAD, 
+    sinon on ne peux pas intervenir sur les styles de base de foundation.
+]
+
+
 [(#REM)
 	Head standard de toutes les pages ; les elements specifiques
 	(title, description) figurent dans les fichiers du dossier head/
@@ -8,6 +15,9 @@
 [(#REM) Fierement fabrique avec SPIP ]
 <meta name="generator" content="SPIP[ (#SPIP_VERSION)]" />
 
+[(#REM) Favicon ]
+[<link rel="shortcut icon" type="image/png" href="(#CHEMIN{favicon.png})" />]
+
 [(#REM) Lien vers le flux RSS du site ]
 [<link rel="alternate" type="application/rss+xml" title="<:syndiquer_site:>" href="(#URL_PAGE{backend})" />]
 
@@ -16,6 +26,10 @@
 
 [(#REM) Feuille de style par defaut pour les formulaires de SPIP ]
 [<link rel="stylesheet" href="(#CHEMIN{spip_formulaires.css}|direction_css)" type="text/css" media="projection, screen, tv" />]
+
+[(#REM) formulaires et clear de SPIP, toujours utile de les avoirs à disposition. ]
+[<link rel="stylesheet" href="(#CHEMIN{css/form.css}|direction_css)" type="text/css" />]
+[<link rel="stylesheet" href="(#CHEMIN{css/clear.css}|direction_css)" type="text/css" />]
 
 [(#REM) Balise permettant aux plugins d'inserer des fichiers CSS ]
 #INSERT_HEAD_CSS
@@ -31,22 +45,46 @@
 ]
 
 [(#REM) Balise permettant aux plugins d'inserer des appels javascript ou css ;
-	C'est ici que SPIP va inserer l'appel de la librairie jQuery
-	Et appeler a la fin compacte_head pour agreger et compacter tout le head dans des fichiers statiques
-	si l'option est cochee dans Configuration
+    C'est ici que SPIP va inserer l'appel de la librairie jQuery
+    Et appeler a la fin compacte_head pour agreger et compacter tout le head dans des fichiers statiques
+    si l'option est cochee dans Configuration
 ]
 
 #INSERT_HEAD
 
+[(#REM) 
+    Foundation utilise un propriété (border-box) qui n'est pas prise en charge nativement par IE.
+    On ajoute un fix pour rendre cela compatible.
+]
+<style type="text/css">
+[(#CONFIG{foundation/fichier_htc}|oui)
+    *, *:before, *:after {
+        [behavior: url((#CHEMIN{boxsizing.htc}));]
+    }
+    
+]
+
+[(#REM) Faire en sorte que les iframes soit responsive, pour le filtre iframe_responsive ]
+.iframe_container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.iframe_container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
 [(#REM) Feuille de style personnalisee pour surcharger les precedentes
-    A noter par defaut cette css n'existe pas
+	A noter par defaut cette css n'existe pas
 ]
 [<link rel="stylesheet" href="(#CHEMIN{perso.css}|direction_css)" type="text/css" media="projection, screen, tv" />]
 
-[(#REM) Ajout perso ]
-
 [(#REM) Script ]
 [<script src="(#CHEMIN{js/script.min.js})" type="text/javascript"></script>]
-
-[(#REM) FavIco ]
-[<link rel="shortcut icon" type="image/x-icon" href="(#CHEMIN{favicon.png})" />]

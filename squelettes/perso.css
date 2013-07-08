@@ -161,9 +161,6 @@ textarea {
 article {
   display: block;
   margin-bottom: 10px; }
-  article iframe {
-    width: 696px;
-    height: 392px; }
 
 /* Formulaire Obligatoire. */
 .obligatoire {
