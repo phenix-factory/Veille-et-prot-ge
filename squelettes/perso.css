@@ -148,6 +148,8 @@ textarea {
   font-size: 1em; }
 .page_sommaire #news a.right {
   font-size: 0.8em; }
+.page_sommaire #news .pagination {
+  margin-right: 10px; }
 .page_sommaire #alert a.right {
   font-size: 0.8em; }
 .page_sommaire #alert #flash {
