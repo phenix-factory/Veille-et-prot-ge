@@ -52,61 +52,8 @@ a {
       display: inline;
       margin-right: 20px; }
 
-/* Menu Patte */
-#patte {
-  position: relative;
-  background: url(img/patte.png);
-  width: 202px;
-  height: 191px; }
-  #patte p {
-    color: #FFF;
-    position: absolute;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg); }
-  #patte a {
-    color: white; }
-  #patte a:hover {
-    text-decoration: none; }
-  #patte li {
-    padding-left: 5px; }
-  #patte li:hover {
-    background: #bfd3d7;
-    cursor: pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; }
-  #patte ul {
-    list-style: none; }
-    #patte ul li ul a {
-      color: #136690; }
-  #patte .lvl1, #patte .lvl2 {
-    position: absolute;
-    display: none;
-    background: #FFF;
-    z-index: 2;
-    width: 250px;
-    padding: 5px;
-    border: 1px solid #000;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; }
-  #patte #Sections {
-    position: absolute;
-    top: 15px;
-    left: 40px; }
-  #patte #Photo {
-    position: absolute;
-    top: 95px;
-    left: 135px; }
-  #patte #Contact {
-    position: absolute;
-    top: 150px;
-    left: 80px; }
-  #patte #Club {
-    position: absolute;
-    top: 40px;
-    left: 125px; }
+#menu {
+  margin-top: 20px; }
 
 /* CSS général */
 h1 {
@@ -209,6 +156,5 @@ article {
 .spip_logos {
   margin-bottom: 20px; }
 
-@media only screen and (max-device-width: 480px) {
-  #patte {
-    display: none; } }
+.formulaire_spip input.text {
+  width: 100%; }

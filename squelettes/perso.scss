@@ -14,15 +14,6 @@ $bg_link_patte: #bfd3d7;
     border: 1px solid #000;
     @include radius();
 }
-@mixin patte_menu() {
-    color: #FFF;
-    position: absolute;
-    -webkit-transform:rotate(-20deg);
-    -moz-transform:rotate(-20deg);
-    -o-transform:rotate(-20deg);
-    -ms-transform:rotate(-20deg);
-    transform:rotate(-20deg);
-}
 
 /* Les liens généraux */
 a {
@@ -85,78 +76,8 @@ a {
     }
 }
 
-/* Menu Patte */
-#patte {
-    position: relative;
-    background: url(img/patte.png);
-    width: 202px;
-    height: 191px;
-    p {
-        @include patte_menu();
-    }
-
-    a {
-        color: $color_link_patte;
-    }
-    a:hover {
-        text-decoration: none;
-    }
-    li {
-        padding-left: 5px;
-    }
-    li:hover {
-        background: $bg_link_patte;
-        cursor: pointer;
-        @include radius();
-    }
-    
-    ul {
-        list-style: none;
-        li {
-            ul {
-                a {
-                    color: $color_link;
-                }
-            }
-        }
-    }
-
-
-    // Les submenu
-    .lvl1, .lvl2{
-        position: absolute;
-        display: none;
-        background: #FFF;
-        z-index: 2;
-        width: 250px;
-        padding: 5px;
-        @include border();
-    }
-
-    // Positionnement des éléments de la patte
-    #Sections {
-        position: absolute;
-        top: 15px;
-        left: 40px;
-    }
-
-    #Photo {
-        position: absolute;
-        top: 95px;
-        left: 135px;
-    }
-
-    #Contact {
-        position: absolute;
-        top: 150px;
-        left: 80px;
-    }
-
-    #Club {
-        position: absolute;
-        top: 40px;
-        left: 125px;
-    }
+#menu {
+    margin-top: 20px;
 }
 
 /* CSS général */
@@ -288,10 +209,4 @@ a.spip_out, a.spip_glossaire {
 /* Logo SPIP */
 .spip_logos {
     margin-bottom: 20px;
-}
-
-@media only screen and (max-device-width: 480px) {
-    #patte {
-        display: none;
-    }
 }
