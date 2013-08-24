@@ -13,13 +13,13 @@
         </div>
 
         <div id="conteneur" class="row">
-            <div class="large-3 columns">
+            <div class="large-3 columns hide-for-small">
                 <INCLURE{fond=inclure/patte,env}>
                 
                 #FORMULAIRE_NEWSLETTER_SUBSCRIBE{vp}
             </div>
 
-            <div id="contenu-principal" class="large-9 columns">
+            <div id="contenu-principal" class="large-9 small-12 columns">
                 <INCLURE{fond=contenu/#ENV{type},env}{ajax}>
             </div>
         </div>
@@ -33,7 +33,7 @@
 </div>
 
 <script type="text/javascript">
-$("#menu").menu();
+$("#menu").menu({ position: {collision: "fit"} });
 </script>
 
 <!-- Piwik -->
