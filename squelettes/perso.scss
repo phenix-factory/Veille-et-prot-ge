@@ -15,7 +15,7 @@ $bg_link_patte: #bfd3d7;
     @include radius();
 }
 
-/* Les liens généraux */
+/* Les liens generaux */
 a {
     color: $color_link;
 }
@@ -33,7 +33,7 @@ a {
     border: none;
 }
 
-/* Bordure générale */
+/* Bordure generale */
 #border {
     border: 1px solid #000;
     border-top: none;
@@ -42,7 +42,7 @@ a {
     padding-bottom: 10px;
 }
 
-/* Entête du site */
+/* Entete du site */
 #entete {
     padding: 0;
     position: relative;
@@ -80,7 +80,7 @@ a {
     margin-top: 20px;
 }
 
-/* CSS général */
+/* CSS general */
 h1 {
     font-size: 1.6em;
 }
@@ -158,7 +158,7 @@ article {
     color: #FF0000;
 }
 
-/* Système d'alert */
+/* Systeme d alert */
 #alert {
     margin-right: 1px;
     margin-left: 1px;
@@ -189,7 +189,7 @@ article {
     color: #878787;
 }
 
-/* Les galerie d'images */
+/* Les galerie d images */
 #documents_portfolio {
     ul {
         margin: 0;
@@ -209,4 +209,9 @@ a.spip_out, a.spip_glossaire {
 /* Logo SPIP */
 .spip_logos {
     margin-bottom: 20px;
+}
+
+.ui-widget {
+    z-index: 1;
+    width: 200px;
 }
