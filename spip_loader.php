@@ -59,7 +59,7 @@ define('_PCL_ZIP_RANGE', 200);
 // v 2.2 : introduction du parametre d'URL dest
 // v 2.3 : introduction du parametre d'URL range
 // v 2.4 : redirection par meta refresh au lieu de header Location
-define('_SPIP_LOADER_VERSION', '2.4.2');
+define('_SPIP_LOADER_VERSION', '2.4.3');
 #
 #######################################################################
 
@@ -100,8 +100,6 @@ $langues = array (
 //
 // Traduction des textes de SPIP
 //
-define('_ECRIRE_INC_VERSION', true); # controle secu fichiers de langue
-
 function _TT($code, $args=array()) {
 	global $lang;
 	$code = str_replace('tradloader:', '', $code);
@@ -615,7 +613,8 @@ function verifie_zlib_ok()
 function spip_loader_reinstalle() {
 	if(!defined(_SPIP_LOADER_UPDATE_AUTEURS))
 		define('_SPIP_LOADER_UPDATE_AUTEURS', '1');
-	if ($GLOBALS['auteur_session']['statut'] != '0minirezo'
+	if (!isset($GLOBALS['auteur_session']['statut'])
+	OR $GLOBALS['auteur_session']['statut'] != '0minirezo'
 	OR !in_array($GLOBALS['auteur_session']['id_auteur'],
 	explode(':', _SPIP_LOADER_UPDATE_AUTEURS))) {
 		include_spip('inc/headers');
@@ -775,8 +774,10 @@ $GLOBALS['taux'] = 0; // calcul eventuel du taux de transfert+dezippage
 if (@file_exists('ecrire/inc_version.php')) {
 	define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=accueil"); 
 	include_once 'ecrire/inc_version.php';
-	if (defined('_FILE_CONNECT')
-	&& _FILE_CONNECT && strpos(_FILE_CONNECT, '.php')) {
+	if (
+	  (defined('_FILE_CONNECT') AND _FILE_CONNECT AND strpos(_FILE_CONNECT, '.php'))
+	  OR defined('_SITES_ADMIN_MUTUALISATION')
+	) {
 		spip_loader_reinstalle();
 	}
 } else define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=install"); 
