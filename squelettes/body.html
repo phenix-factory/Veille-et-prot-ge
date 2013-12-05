@@ -1,32 +1,32 @@
 <div id="page">
     <div id="border">
         <div id="entete" class="row">
-            <div class="large-12 columns">
+            <div class="#COLONNES{12, large}">
                 <INCLURE{fond=inclure/entete,env}>
             </div>
         </div>
 
         <div id="nav" class="row">
-            <div class="large-12 columns">
+            <div class="#COLONNES{12, large}">
                 <INCLURE{fond=inclure/barre-nav,env}>
             </div>
         </div>
 
         <div id="conteneur" class="row">
-            <div class="large-3 columns hide-for-small">
+            <div class="#COLONNES{3, large} hide-for-small">
                 <INCLURE{fond=inclure/patte,env}>
                 
                 #FORMULAIRE_NEWSLETTER_SUBSCRIBE{vp}
             </div>
 
-            <div id="contenu-principal" class="large-9 small-12 columns">
+            <div id="contenu-principal" class="#COLONNES{9, large} small-12">
                 <INCLURE{fond=contenu/#ENV{type},env}{ajax}>
             </div>
         </div>
     </div>
 
     <div id="pied" class="row">
-        <div class="large-12 columns">
+        <div class="#COLONNES{12, large}">
             <INCLURE{fond=inclure/pied,env}>
         </div>
     </div>
