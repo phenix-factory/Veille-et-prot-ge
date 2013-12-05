@@ -1,9 +1,15 @@
+body {
+  font-size: 1em; }
+
 /* Les liens generaux */
 a {
   color: #136690; }
 
 .clear {
   clear: both; }
+
+.row {
+  max-width: 100%; }
 
 /* Positionnement de la page */
 #page {

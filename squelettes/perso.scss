@@ -15,6 +15,10 @@ $bg_link_patte: #bfd3d7;
     @include radius();
 }
 
+body {
+    font-size: 1em;
+}
+
 /* Les liens generaux */
 a {
     color: $color_link;
@@ -22,6 +26,10 @@ a {
 
 .clear {
     clear: both;
+}
+
+.row {
+    max-width: 100%;
 }
 
 /* Positionnement de la page */
