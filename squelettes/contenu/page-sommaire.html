@@ -4,26 +4,26 @@
 <INCLURE{fond=inclure/alert, env}>
 
 <div id="news" class="row">
-    #ANCRE_PAGINATION
-    <BOUCLE_article_blog(ARTICLES){id_rubrique IN 3,4,6}{!id_mot=1}{par date} {inverse} {pagination 6}>
-    <div class="[(#COLONNES{4, large})] [(#COMPTEUR_BOUCLE|alterner{'', '', '', clear})]">
-        [(#REM) On vérifie s'il y a des photos dans l'article. ]
-        [(#SET{doc_link, ''})]
-        <BOUCLE_test_doc(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}>
-        [(#COMPTEUR_BOUCLE|>{0}|oui) #SET{doc_link, oui}]
-        </BOUCLE_test_doc>
+  #ANCRE_PAGINATION
+  <BOUCLE_article_blog(ARTICLES){id_rubrique IN 3,4,6}{!id_mot=1}{par date} {inverse} {pagination 6}>
+  <div class="[(#COLONNES{4, large})] [(#COMPTEUR_BOUCLE|alterner{'', '', '', clear})]">
+    [(#REM) On vérifie s'il y a des photos dans l'article. ]
+    [(#SET{doc_link, ''})]
+    <BOUCLE_test_doc(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}>
+    [(#COMPTEUR_BOUCLE|>{0}|oui) #SET{doc_link, oui}]
+    </BOUCLE_test_doc>
 
-        <article>
-            <h1 class="#EDIT{titre}"><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></h1>
-            [<a href="#URL_ARTICLE" title="#TITRE">(#LOGO_ARTICLE|image_passe_partout{200,100}|image_recadre{200,100})</a>]
+    <article>
+      <h1 class="#EDIT{titre}"><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></h1>
+      [<a href="#URL_ARTICLE" title="#TITRE">(#LOGO_ARTICLE|image_passe_partout{200,100}|image_recadre{200,100})</a>]
 
-            <div class="#EDIT{texte}">[(#INTRODUCTION{350})]</div>
+      <div class="#EDIT{texte}">[(#INTRODUCTION{350})]</div>
 
-            [<a href="(#URL_ARTICLE)" title="#TITRE" class="right">Lire la suite[ (#GET{doc_link}|oui) et voir les photos]</a>]
-        </article>
-    </div>
+      [<a href="(#URL_ARTICLE)" title="#TITRE" class="right">Lire la suite[ (#GET{doc_link}|oui) et voir les photos]</a>]
+    </article>
+  </div>
 
-    </BOUCLE_article_blog>
-    [<p class="pagination">(#PAGINATION)</p>]
+  </BOUCLE_article_blog>
+  [<p class="pagination">(#PAGINATION)</p>]
 </div>
 </B_article_blog>
