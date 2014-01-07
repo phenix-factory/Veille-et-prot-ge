@@ -1,5 +1,5 @@
-config/
-config/base/
+config/connect.php
+config/bases/
 tmp/
 /IMG/
 local/
