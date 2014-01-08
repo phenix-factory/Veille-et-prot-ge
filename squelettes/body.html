@@ -14,12 +14,12 @@
     </div>
 
     <div id="conteneur" class="row">
-      <div class="[(#COLONNES{3, large})] hide-for-small-only">
+      <div class="[(#COLONNES{3, large})] [(#COLONNES{3, medium})] hide-for-small-only">
         <INCLURE{fond=inclure/patte,env}>
         #FORMULAIRE_NEWSLETTER_SUBSCRIBE{vp}
       </div>
 
-      <div id="contenu-principal" class="[(#COLONNES{9, large})] small-12">
+      <div id="contenu-principal" class="[(#COLONNES{9, large})] [(#COLONNES{9, medium})] small-12">
         <INCLURE{fond=contenu/#ENV{type},env}{ajax}>
       </div>
     </div>
