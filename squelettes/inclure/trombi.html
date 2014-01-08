@@ -1,7 +1,7 @@
 <B_comite>
 <div class="row">
     <BOUCLE_comite(AUTEURS){id_mot}{par nom}>
-    <div class="large-4 columns">
+    <div class="#COLONNES{4, large}">
         [<a href="[(#LOGO_AUTEUR|extraire_attribut{src})]" title="#NOM" class="mediabox">
             (#LOGO_AUTEUR|image_passe_partout{120, 164}|image_recadre{120, 164}|vider_attribut{class}|centrer)
         </a>]
