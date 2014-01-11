@@ -5,7 +5,7 @@
 
   [(#REM) On vérifie s'il y a des photos dans l'article. ]
   [(#SET{doc_link, ''})]
-  <BOUCLE_test_doc(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}>
+  <BOUCLE_test_doc(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}{0,1}>
     [(#COMPTEUR_BOUCLE|>{0}|oui) #SET{doc_link, oui}]
   </BOUCLE_test_doc>
 
