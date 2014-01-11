@@ -7,101 +7,101 @@ $bg_link_patte: #bfd3d7;
 
 // Fonction
 @mixin radius() {
-    -webkit-border-radius: $radius;
-    border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
 }
 @mixin border() {
-    border: 1px solid #000;
-    @include radius();
+  border: 1px solid #000;
+  @include radius();
 }
 
 body {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 /* Les liens generaux */
 a {
-    color: $color_link;
+  color: $color_link;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 .row {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* Positionnement de la page */
 #page {
-    margin-top: 0;
-    width: 100%;
-    max-width: 980px;
-    padding: 0;
-    border: none;
+  margin-top: 0;
+  width: 100%;
+  max-width: 980px;
+  padding: 0;
+  border: none;
 }
 
 /* Bordure generale */
 #border {
-    border: 1px solid #000;
-    border-top: none;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-bottom: 10px;
+  border: 1px solid #000;
+  border-top: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-bottom: 10px;
 }
 
 /* Entete du site */
 #entete {
-    padding: 0;
-    position: relative;
-    border: none;
+  padding: 0;
+  position: relative;
+  border: none;
 }
 
 /* Logo */
 #logo_vp {
-    position: absolute;
-    top: 20px;
-    right: 60px;
-    background: rgba(255,255,255,0.5);
-    z-index: 6;
-    @include radius();   
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  background: rgba(255,255,255,0.5);
+  z-index: 6;
+  @include radius();   
 }
 
 /* Barre de navigation principal */
 #nav {
-    background: url(img/menuH.png) repeat-x;
-    @include border();
-    ul {
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
+  background: url(img/menuH.png) repeat-x;
+  @include border();
+  ul {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 
-        li {
-            display: inline;
-            margin-right: 20px;
-        }
+    li {
+      display: inline;
+      margin-right: 20px;
     }
+  }
 }
 
 #menu {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* CSS general */
 h1 {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 h2 {
-    font-size: 1.4em;
+  font-size: 1.4em;
 }
 h3 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 ul {
-    margin-left: 30px;
-    list-style-position: inside;
+  margin-left: 30px;
+  list-style-position: inside;
 }
 
 input[type="text"],
@@ -118,108 +118,109 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea {
-    margin: 0;
-    @include radius();
+  margin: 0;
+  @include radius();
 }
 
 /* Contenu */
 #contenu-principal {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .page_sommaire {
-    h1 {
-        font-size: 1em;
-    }
+  h1 {
+    font-size: 1em;
+  }
 
-    #news {
-        a.right {
-            font-size: 0.8em;
-        }
-        .pagination {
-            margin-right: 10px;
-        }
+  #news {
+    a.right {
+      font-size: 0.8em;
     }
-    #alert {
-        a.right {
-            font-size: 0.8em;
-        }
-        #flash {
-            color: #b11b15;
-            font-size: 1.2em;
-        }
+    .pagination {
+      margin-right: 10px;
     }
+  }
+  #alert {
+    a.right {
+      font-size: 0.8em;
+    }
+    #flash {
+      color: #b11b15;
+      font-size: 1.2em;
+      padding-left: 0.9375em;
+    }
+  }
 }
 
 #news {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* Mise en page des articles */
 article {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 /* Formulaire Obligatoire. */
 .obligatoire {
-    color: #FF0000;
+  color: #FF0000;
 }
 
 /* Systeme d alert */
 #alert {
-    margin-right: 1px;
-    margin-left: 1px;
-    padding-bottom: 5px;
-    border: 1px #FF0000 solid;
-    @include radius();
-    h1 {
-        font-size: 1em;
-    }
+  margin-right: 1px;
+  margin-left: 1px;
+  padding-bottom: 5px;
+  border: 1px #FF0000 solid;
+  @include radius();
+  h1 {
+    font-size: 1em;
+  }
 }
 
 /* Footer du site */
 #pied {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 }
 
 #pied .citation {
-    width: 477px;
-    height: 156px;
-    float: right;
-    background: url(img/citation.png) no-repeat right;
-    font-size: 1.4em;
-    padding-top: 50px;
-    padding-right: 160px;
-    padding-left: 30px;
-    text-align: right;
-    color: #878787;
+  width: 477px;
+  height: 156px;
+  float: right;
+  background: url(img/citation.png) no-repeat right;
+  font-size: 1.4em;
+  padding-top: 50px;
+  padding-right: 160px;
+  padding-left: 30px;
+  text-align: right;
+  color: #878787;
 }
 
 /* Les galerie d images */
 #documents_portfolio {
-    ul {
-        margin: 0;
-        list-style: none;
-        li {
-            float: left;
-            line-height: 0;
-            margin: 3px;
-        }
+  ul {
+    margin: 0;
+    list-style: none;
+    li {
+      float: left;
+      line-height: 0;
+      margin: 3px;
     }
+  }
 }
 
 a.spip_out, a.spip_glossaire {
-    
+  
 }
 
 /* Logo SPIP */
 .spip_logos {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .ui-widget {
-    z-index: 1;
-    width: 200px;
+  z-index: 1;
+  width: 200px;
 }
