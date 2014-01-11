@@ -11,7 +11,11 @@
 
   <div class="[(#COLONNES{[(#VAL{12}|div{#TOTAL_BOUCLE})], large})]">
     [<h1 class="#EDIT{titre}"><a href="#URL_ARTICLE">(#TITRE)</a></h1>]
-    [<a href="#URL_ARTICLE" title="#TITRE">(#LOGO_ARTICLE|image_passe_partout{320,160}|image_recadre{320,160})</a>]
+    [<a href="#URL_ARTICLE" title="#TITRE">
+      (#LOGO_ARTICLE
+        |image_passe_partout{320,160}
+        |image_recadre{320,160})
+    </a>]
 
     [(#INTRODUCTION{200})]
 
