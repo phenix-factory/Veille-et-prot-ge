@@ -127,14 +127,13 @@ article {
   color: #FF0000; }
 
 /* Systeme d alert */
-#alert {
+.alerte {
   margin-right: 1px;
-  margin-left: 1px;
   padding-bottom: 5px;
   border: 1px #FF0000 solid;
   -webkit-border-radius: 5px;
   border-radius: 5px; }
-  #alert h1 {
+  .alerte h1 {
     font-size: 1em; }
 
 /* Footer du site */
