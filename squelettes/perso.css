@@ -103,11 +103,15 @@ textarea {
   font-size: 0.8em; }
 .page_sommaire #news .pagination {
   margin-right: 10px; }
-.page_sommaire #alert a.right {
-  font-size: 0.8em; }
-.page_sommaire #alert #flash {
-  color: #b11b15;
-  font-size: 1.2em; }
+.page_sommaire #header_news {
+  clear: both; }
+  .page_sommaire #header_news a.right {
+    font-size: 0.8em; }
+  .page_sommaire #header_news h1 {
+    font-size: 1.2em;
+    padding-left: 0.9375em; }
+  .page_sommaire #header_news #flash {
+    color: #b11b15; }
 
 #news {
   margin-top: 10px; }

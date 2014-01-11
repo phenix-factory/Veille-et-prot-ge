@@ -1,7 +1,6 @@
 <B_alert>
-<div id="alert" class="row">
-  <h1 id="flash" class="#COLONNES{12, large}">Flash News !</h1>
-  <BOUCLE_alert(ARTICLES){id_mot=1}{0,3}{par date}{inverse}>
+  <h1 id="flash">Flash News !</h1>
+  <BOUCLE_alert(ARTICLES){id_mot=1}{0,2}{par date}{inverse}>
 
   [(#REM) On vérifie s'il y a des photos dans l'article. ]
   [(#SET{doc_link, ''})]
@@ -9,7 +8,7 @@
     [(#COMPTEUR_BOUCLE|>{0}|oui) #SET{doc_link, oui}]
   </BOUCLE_test_doc>
 
-  <div class="[(#COLONNES{[(#VAL{12}|div{#TOTAL_BOUCLE})], large})]">
+  <div class="[(#COLONNES{[(#VAL{8}|div{#TOTAL_BOUCLE})], large})]">
     [<h1 class="#EDIT{titre}"><a href="#URL_ARTICLE">(#TITRE)</a></h1>]
     [<a href="#URL_ARTICLE" title="#TITRE">
       (#LOGO_ARTICLE
@@ -22,6 +21,4 @@
     [<a href="(#URL_ARTICLE)" title="#TITRE" class="right">Lire la suite[ (#GET{doc_link}|oui) et voir les photos]</a>]
   </div>
   </BOUCLE_alert>
-</div>
 </B_alert>
-<//B_alert>

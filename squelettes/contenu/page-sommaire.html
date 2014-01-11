@@ -1,8 +1,10 @@
 <B_article_blog>
 
-[(#REM) Système d'alert VP ]
-<INCLURE{fond=inclure/alert, env}>
-
+<div id="header_news" class="row">
+  [(#REM) Système d'alert VP ]
+  <INCLURE{fond=inclure/alert, env}>
+  <INCLURE{fond=inclure/agenda, env}>
+</div>
 <div id="news" class="row">
   #ANCRE_PAGINATION
   <BOUCLE_article_blog(ARTICLES){id_rubrique IN 3,4,6}{!id_mot=1}{par date} {inverse} {pagination 6}>

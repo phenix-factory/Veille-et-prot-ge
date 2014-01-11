@@ -140,14 +140,20 @@ textarea {
       margin-right: 10px;
     }
   }
-  #alert {
+  #header_news {
+    clear: both;
+
     a.right {
       font-size: 0.8em;
     }
-    #flash {
-      color: #b11b15;
+
+    h1 {
       font-size: 1.2em;
       padding-left: 0.9375em;
+    }
+
+    #flash {
+      color: #b11b15;
     }
   }
 }
