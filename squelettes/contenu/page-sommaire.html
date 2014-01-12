@@ -7,10 +7,10 @@
   <INCLURE{fond=inclure/agenda, env}>
 </div>
 
-<div id="news" class="row">
+<ul class="large-block-grid-3">
   #ANCRE_PAGINATION
   <BOUCLE_article_blog(ARTICLES){id_rubrique IN 3,4,6}{!id_mot=1}{par date} {inverse} {pagination 6}>
-  <div class="[(#COLONNES{4, large})] [(#COMPTEUR_BOUCLE|alterner{'', '', '', clear})]">
+  <li>
     [(#REM) On vérifie s'il y a des photos dans l'article. ]
     [(#SET{doc_link, ''})]
     <BOUCLE_test_doc(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif}>
@@ -25,9 +25,9 @@
 
       [<a href="(#URL_ARTICLE)" title="#TITRE" class="right">Lire la suite[ (#GET{doc_link}|oui) et voir les photos]</a>]
     </article>
-  </div>
+  </li>
 
   </BOUCLE_article_blog>
-  [<p class="pagination">(#PAGINATION)</p>]
-</div>
+</ul>
+[<p class="pagination">(#PAGINATION)</p>]
 </B_article_blog>
