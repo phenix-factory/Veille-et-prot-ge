@@ -6,7 +6,7 @@
 [(#SET{datas, #ARRAY})]
 <BOUCLE_evenement_liste(EVENEMENTS)>
   [(#SET{saisie, #TITRE [(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})]})]
-  [(#SET{datas, #GET{datas}|array_merge{#ARRAY{#GET{saisie},#GET{saisie}}}}})]
+  [(#SET{datas, #GET{datas}|array_merge{#ARRAY{#GET{saisie},#GET{saisie}}}})]
 </BOUCLE_evenement_liste>
 
 [(#REM) datas peut être une chaine qu'on sait décomposer ]
