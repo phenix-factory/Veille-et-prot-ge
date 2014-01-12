@@ -123,7 +123,8 @@ textarea {
       border: 1px solid #0049a8;
       -webkit-border-radius: 5px;
       border-radius: 5px;
-      padding: 10px; }
+      padding: 10px;
+      margin-bottom: 5px; }
       .page_sommaire #header_news .agenda .evenement p {
         margin: 0; }
 
