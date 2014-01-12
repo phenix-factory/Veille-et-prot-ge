@@ -1,0 +1,21 @@
+<BOUCLE_evenement(EVENEMENTS){id_evenement}>
+  <article>
+    <h1 class="#EDIT{titre}"><a href="#URL_EVENEMENT" title="[(#TITRE|attribut_html)]">#TITRE</a></h1>
+
+    [<h2>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</h2>]
+
+    [<a href="[(#LOGO_EVENEMENT|extraire_attribut{src})]" class="mediabox">
+      (#LOGO_EVENEMENT
+      |image_passe_partout{696, 200}
+      |image_recadre{696,200,center})
+    </a>]
+
+  [<div class="#EDIT{texte}">
+  (#DESCRIPTIF|image_reduire{696}|iframe_responsive)
+  </div>]
+
+  <h2>Ou ?</h2>
+  <h3>#LIEU</h3>
+  #ADRESSE
+  </article>
+</BOUCLE_evenement>
