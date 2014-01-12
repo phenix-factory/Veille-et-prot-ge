@@ -1,9 +1,19 @@
 <B_agenda>
-<div class="#COLONNES{4, large}">
+<div class="[(#COLONNES{4, large})] agenda">
   <h1>Agenda !</h1>
   <ul>
-  <BOUCLE_agenda(EVENEMENTS){age<0}{par date}{statut=publie}>
-    <li>#TITRE</li>
+  <BOUCLE_agenda(EVENEMENTS){age<0}{par date}{statut=publie}{0,3}>
+    <li>
+      <div class="evenement">
+        [<a href="#URL_EVENEMENT">
+          <h2>(#TITRE)</h2>
+        </a>]
+
+        [<p class="meta_evenement">(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</p>]
+
+        <p>#INTRODUCTION{}</p>
+      </div>
+    </li>
   </BOUCLE_agenda>
   </ul>
 </div>
