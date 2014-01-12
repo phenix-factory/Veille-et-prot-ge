@@ -5,7 +5,7 @@
 [(#REM) On va simplement replire datas correctement ]
 [(#SET{datas, #ARRAY})]
 <BOUCLE_evenement_liste(EVENEMENTS)>
-  [(#SET{saisie, #TITRE [(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})]})]
+  [(#SET{saisie, #TITRE [(#DATE_DEBUT|affdate{d-m-Y})]})]
   [(#SET{datas, #GET{datas}|array_merge{#GET{saisie},#GET{saisie}}}})]
 </BOUCLE_evenement_liste>
 
