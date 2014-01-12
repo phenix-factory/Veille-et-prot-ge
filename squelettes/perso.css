@@ -113,6 +113,19 @@ textarea {
     padding-left: 0.9375em; }
   .page_sommaire #header_news #flash {
     color: #b11b15; }
+  .page_sommaire #header_news .agenda {
+    float: right; }
+    .page_sommaire #header_news .agenda ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    .page_sommaire #header_news .agenda .evenement {
+      border: 1px solid #0049a8;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      padding: 10px; }
+      .page_sommaire #header_news .agenda .evenement p {
+        margin: 0; }
 
 #news {
   margin-top: 10px; }
@@ -128,9 +141,7 @@ article {
 
 /* Systeme d alert */
 .alerte {
-  margin-right: 1px;
   padding-bottom: 5px;
-  border: 1px #FF0000 solid;
   -webkit-border-radius: 5px;
   border-radius: 5px; }
   .alerte h1 {
@@ -169,3 +180,7 @@ article {
 .ui-widget {
   z-index: 1;
   width: 200px; }
+
+/* Cette parie de foundation brise les noix */
+[class*="column"] + [class*="column"]:last-child {
+  float: left; }

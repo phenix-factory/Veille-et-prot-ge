@@ -156,6 +156,25 @@ textarea {
     #flash {
       color: #b11b15;
     }
+
+    // Mise en page de l'agenda
+    .agenda {
+      float: right;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .evenement {
+        border: 1px solid #0049a8;
+        @include radius();
+        padding: 10px;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
   }
 }
 
@@ -176,9 +195,7 @@ article {
 
 /* Systeme d alert */
 .alerte {
-  margin-right: 1px;
   padding-bottom: 5px;
-  border: 1px #FF0000 solid;
   @include radius();
   h1 {
     font-size: 1em;
@@ -229,4 +246,9 @@ a.spip_out, a.spip_glossaire {
 .ui-widget {
   z-index: 1;
   width: 200px;
+}
+
+/* Cette parie de foundation brise les noix */
+[class*="column"] + [class*="column"]:last-child {
+  float: left;
 }
