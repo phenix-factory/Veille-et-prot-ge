@@ -6,15 +6,11 @@
 }
 
 #iview {
-	display: block; 
+	display: block;
 	width: 100%;
 	height: 227px;
 	position: relative;
-    overflow: hidden;
-    -webkit-border-bottom-right-radius: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            border-bottom-left-radius: 5px;
+  overflow: hidden;
 }
 
 #iview .iviewSlider {
