@@ -65,24 +65,7 @@ a {
   right: 60px;
   background: rgba(255,255,255,0.5);
   z-index: 6;
-  @include radius();   
-}
-
-/* Barre de navigation principal */
-#nav {
-  background: url(img/menuH.png) repeat-x;
-  @include border();
-  ul {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-
-    li {
-      display: inline;
-      margin-right: 20px;
-    }
-  }
+  @include radius();
 }
 
 #menu {
@@ -236,7 +219,7 @@ article {
 }
 
 a.spip_out, a.spip_glossaire {
-  
+
 }
 
 /* Logo SPIP */
