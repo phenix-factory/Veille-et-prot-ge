@@ -18,13 +18,13 @@
 [(#ENV{cacher_option_intro}|non)<option value="">[(#ENV{option_intro})]</option>]
 <BOUCLE_selection(POUR){tableau #GET{datas}}>
   <B_cond>
-	<optgroup label="#CLE">
+	<optgroup label="[(#CLE|attribut_html)]">
 	<BOUCLE_cond(CONDITION){si #VALEUR|is_array}><BOUCLE_optgroup(POUR){tableau #VALEUR}>
-		<option value="#CLE"[(#CLE|=={#GET{valeur}}|oui)selected="selected"]>#VALEUR</option>
+		<option value="[(#CLE|attribut_html)]"[(#CLE|=={#GET{valeur}}|oui)selected="selected"]>#VALEUR</option>
 	</BOUCLE_optgroup></BOUCLE_cond>
 	</optgroup>
 	</B_cond>
-	<option value="#CLE"[(#CLE|=={#GET{valeur}}|oui)selected="selected"]>#VALEUR</option>
+	<option value="[(#CLE|attribut_html)]"[(#CLE|=={#GET{valeur}}|oui)selected="selected"]>#VALEUR</option>
 	<//B_cond>
 </BOUCLE_selection>
 </select>
