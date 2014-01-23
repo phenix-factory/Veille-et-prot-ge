@@ -10,9 +10,11 @@
     </div>
 
     <div id="conteneur" class="row">
-      <div class="[(#COLONNES{3, large})] [(#COLONNES{3, medium})] hide-for-small-only">
-        <INCLURE{fond=inclure/patte,env}>
-        #FORMULAIRE_NEWSLETTER_SUBSCRIBE{vp}
+      <div class="[(#COLONNES{3, large})] [(#COLONNES{3, medium})]">
+        <div class="hide-for-small-only">
+          <INCLURE{fond=inclure/patte,env}>
+          #FORMULAIRE_NEWSLETTER_SUBSCRIBE{vp}
+        </div>
       </div>
 
       <div id="contenu-principal" class="[(#COLONNES{9, large})] [(#COLONNES{9, medium})] [(#COLONNES{12, small})]">
