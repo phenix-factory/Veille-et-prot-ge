@@ -1,55 +1,57 @@
-<div id="page">
-  #FORMULAIRE_ADMIN
-  <div id="border">
-    <div id="entete">
-      <INCLURE{fond=inclure/entete,env}>
-    </div>
+<body>
+  <div id="page">
+    #FORMULAIRE_ADMIN
+    <div id="border">
+      <div id="entete">
+        <INCLURE{fond=header/#ENV{type-page},env}>
+      </div>
 
-    <div id="nav">
-      <INCLURE{fond=inclure/barre-nav,env}>
-    </div>
+      <div id="nav">
+        <INCLURE{fond=inclure/barre-nav,env}>
+      </div>
 
-    <div id="conteneur" class="row">
-      <div class="[(#COLONNES{3, large})] [(#COLONNES{3, medium})]">
-        <div class="hide-for-small">
-          <INCLURE{fond=inclure/patte,env}>
-          #FORMULAIRE_NEWSLETTER_SUBSCRIBE{vp}
+      <div id="conteneur" class="row">
+        <div class="[(#COLONNES{3, large})] [(#COLONNES{3, medium})]">
+          <div class="hide-for-small">
+          <INCLURE{fond=extra1/#ENV{type-page},env}>
+            #FORMULAIRE_NEWSLETTER_SUBSCRIBE{vp}
+          </div>
+        </div>
+
+        <div id="contenu-principal" class="[(#COLONNES{9, large})] [(#COLONNES{9, medium})] [(#COLONNES{12, small})]">
+          <INCLURE{fond=content/#ENV{type-page},env}{ajax}>
         </div>
       </div>
+    </div>
 
-      <div id="contenu-principal" class="[(#COLONNES{9, large})] [(#COLONNES{9, medium})] [(#COLONNES{12, small})]">
-        <INCLURE{fond=contenu/#ENV{type},env}{ajax}>
+    <div id="pied" class="row">
+      <div class="[(#COLONNES{12, large})]">
+        <INCLURE{fond=inclure/pied,env}>
       </div>
     </div>
   </div>
 
-  <div id="pied" class="row">
-    <div class="[(#COLONNES{12, large})]">
-      <INCLURE{fond=inclure/pied,env}>
-    </div>
-  </div>
-</div>
+  <script type="text/javascript">
+    $("#menu").menu();
+  </script>
 
-<script type="text/javascript">
-  $("#menu").menu();
-</script>
+  <!-- Piwik -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
 
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["trackPageView"]);
-  _paq.push(["enableLinkTracking"]);
+    (function() {
+      var u=(("https:" == document.location.protocol) ? "https" : "http") + "://p.henix.be/piwik/";
+      _paq.push(["setTrackerUrl", u+"piwik.php"]);
+      _paq.push(["setSiteId", "3"]);
+      var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+      g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Piwik Code -->
 
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://p.henix.be/piwik/";
-    _paq.push(["setTrackerUrl", u+"piwik.php"]);
-    _paq.push(["setSiteId", "3"]);
-    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Piwik Code -->
-
-<!-- Piwik Image Tracker -->
-<img src="http://p.henix.be/piwik/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" />
-<!-- End Piwik -->
+  <!-- Piwik Image Tracker -->
+  <img src="http://p.henix.be/piwik/piwik.php?idsite=2&amp;rec=1" style="border:0" alt="" />
+  <!-- End Piwik -->
+</body>
