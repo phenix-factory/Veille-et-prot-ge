@@ -69,12 +69,14 @@ a {
   margin-top: 20px;
   li {
     ul {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      @include transition-property(max-height);
+      @include transition-duration(1s);
     }
 
     &:hover > ul {
-      display: block;
-      @include transition-property(opacity);
+      max-height: 500px;
     }
   }
 
