@@ -68,13 +68,18 @@ a {
   @include radius();
 }
 
-ul#menu {
+#menu {
   margin-top: 20px;
   li {
     ul {
       display: none;
     }
+
+    &:hover > ul {
+      display: block;
+    }
   }
+
 }
 
 /* CSS general */
