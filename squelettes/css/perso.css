@@ -98,20 +98,6 @@ textarea {
     padding-left: 0.9375em; }
   .page_sommaire #header_news #flash {
     color: #b11b15; }
-  .page_sommaire #header_news .agenda {
-    float: right; }
-    .page_sommaire #header_news .agenda ul {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-    .page_sommaire #header_news .agenda .evenement {
-      border: 1px solid #0049a8;
-      padding: 10px;
-      margin-bottom: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px; }
-      .page_sommaire #header_news .agenda .evenement p {
-        margin: 0; }
 
 #news {
   margin-top: 10px; }
@@ -170,3 +156,18 @@ article {
 /* Cette parie de foundation brise les noix */
 [class*="column"] + [class*="column"]:last-child {
   float: left; }
+
+.agenda {
+  float: right; }
+  .agenda ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .agenda .evenement {
+    border: 1px solid #0049a8;
+    padding: 10px;
+    margin-bottom: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+    .agenda .evenement p {
+      margin: 0; }

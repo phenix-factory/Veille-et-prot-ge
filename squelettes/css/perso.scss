@@ -139,26 +139,6 @@ textarea {
     #flash {
       color: #b11b15;
     }
-
-    // Mise en page de l'agenda
-    .agenda {
-      float: right;
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .evenement {
-        border: 1px solid #0049a8;
-        padding: 10px;
-        margin-bottom: 5px;
-        @include radius();
-
-        p {
-          margin: 0;
-        }
-      }
-    }
   }
 }
 
@@ -235,4 +215,23 @@ a.spip_out, a.spip_glossaire {
 /* Cette parie de foundation brise les noix */
 [class*="column"] + [class*="column"]:last-child {
   float: left;
+}
+// Mise en page de l'agenda
+.agenda {
+  float: right;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .evenement {
+    border: 1px solid #0049a8;
+    padding: 10px;
+    margin-bottom: 5px;
+    @include radius();
+
+    p {
+      margin: 0;
+    }
+  }
 }
