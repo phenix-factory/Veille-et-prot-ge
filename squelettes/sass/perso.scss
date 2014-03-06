@@ -67,6 +67,15 @@ a {
 
 #menu {
   margin-top: 20px;
+  padding: {
+    left: 20px;
+    right: 20px;
+    top: 10px;
+    bottom: 10px;
+  }
+  border: 1px solid #262626;
+  @include border-radius(5px, 5px);
+
   li {
     ul {
       max-height: 0;
@@ -246,3 +255,7 @@ a.spip_out, a.spip_glossaire {
   }
 }
 
+.formulaire_newsletter {
+  border: none;
+  padding: 0;
+}
