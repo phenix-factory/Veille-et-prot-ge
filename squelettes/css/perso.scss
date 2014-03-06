@@ -68,8 +68,13 @@ a {
   @include radius();
 }
 
-#menu {
+ul#menu {
   margin-top: 20px;
+  li {
+    ul {
+      display: none;
+    }
+  }
 }
 
 /* CSS general */
@@ -235,3 +240,4 @@ a.spip_out, a.spip_glossaire {
     }
   }
 }
+
