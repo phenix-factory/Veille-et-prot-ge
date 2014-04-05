@@ -56,12 +56,13 @@ a {
   right: 60px;
   background: rgba(255, 255, 255, 0.5);
   z-index: 6;
+  padding: 3px;
   -webkit-border-radius: 5px 5px;
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
 
-/* line 68, ../sass/perso.scss */
+/* line 69, ../sass/perso.scss */
 #menu {
   margin-top: 20px;
   padding-left: 20px;
@@ -73,7 +74,7 @@ a {
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 80, ../sass/perso.scss */
+/* line 81, ../sass/perso.scss */
 #menu li ul {
   max-height: 0;
   overflow: hidden;
@@ -86,34 +87,34 @@ a {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 87, ../sass/perso.scss */
+/* line 88, ../sass/perso.scss */
 #menu li:hover > ul {
   max-height: 500px;
 }
 
 /* CSS general */
-/* line 95, ../sass/perso.scss */
+/* line 96, ../sass/perso.scss */
 h1 {
   font-size: 1.6em;
 }
 
-/* line 98, ../sass/perso.scss */
+/* line 99, ../sass/perso.scss */
 h2 {
   font-size: 1.4em;
 }
 
-/* line 101, ../sass/perso.scss */
+/* line 102, ../sass/perso.scss */
 h3 {
   font-size: 1.2em;
 }
 
-/* line 105, ../sass/perso.scss */
+/* line 106, ../sass/perso.scss */
 ul {
   margin-left: 30px;
   list-style-position: inside;
 }
 
-/* line 123, ../sass/perso.scss */
+/* line 124, ../sass/perso.scss */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -135,80 +136,76 @@ textarea {
 }
 
 /* Contenu */
-/* line 129, ../sass/perso.scss */
+/* line 130, ../sass/perso.scss */
 #contenu-principal {
   padding-top: 20px;
 }
 
-/* line 134, ../sass/perso.scss */
-.page_sommaire h1 {
-  font-size: 1em;
-}
-/* line 139, ../sass/perso.scss */
+/* line 136, ../sass/perso.scss */
 .page_sommaire #news a.right {
   font-size: 0.8em;
 }
-/* line 142, ../sass/perso.scss */
+/* line 139, ../sass/perso.scss */
 .page_sommaire #news .pagination {
   margin-right: 10px;
 }
-/* line 146, ../sass/perso.scss */
+/* line 143, ../sass/perso.scss */
 .page_sommaire #header_news {
   clear: both;
 }
-/* line 149, ../sass/perso.scss */
+/* line 146, ../sass/perso.scss */
 .page_sommaire #header_news a.right {
   font-size: 0.8em;
 }
-/* line 153, ../sass/perso.scss */
+/* line 150, ../sass/perso.scss */
 .page_sommaire #header_news h1 {
   font-size: 1.2em;
   padding-left: 0.9375em;
 }
-/* line 158, ../sass/perso.scss */
+/* line 155, ../sass/perso.scss */
 .page_sommaire #header_news #flash {
   color: #b11b15;
 }
 
-/* line 164, ../sass/perso.scss */
+/* line 161, ../sass/perso.scss */
 #news {
   margin-top: 10px;
 }
 
 /* Mise en page des articles */
-/* line 169, ../sass/perso.scss */
+/* line 166, ../sass/perso.scss */
 article {
   display: block;
   margin-bottom: 10px;
 }
 
 /* Formulaire Obligatoire. */
-/* line 175, ../sass/perso.scss */
+/* line 172, ../sass/perso.scss */
 .obligatoire {
   color: #FF0000;
 }
 
 /* Systeme d alert */
-/* line 180, ../sass/perso.scss */
+/* line 177, ../sass/perso.scss */
 .alerte {
   padding-bottom: 5px;
   -webkit-border-radius: 5px 5px;
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 183, ../sass/perso.scss */
+/* line 180, ../sass/perso.scss */
 .alerte h1 {
   font-size: 1em;
 }
 
 /* Footer du site */
-/* line 189, ../sass/perso.scss */
+/* line 186, ../sass/perso.scss */
 #pied {
   border: none;
   background: none;
 }
 
-/* line 194, ../sass/perso.scss */
+/* line 191, ../sass/perso.scss */
 #pied .citation {
   width: 477px;
   height: 156px;
@@ -223,12 +220,12 @@ article {
 }
 
 /* Les galerie d images */
-/* line 209, ../sass/perso.scss */
+/* line 206, ../sass/perso.scss */
 #documents_portfolio ul {
   margin: 0;
   list-style: none;
 }
-/* line 212, ../sass/perso.scss */
+/* line 209, ../sass/perso.scss */
 #documents_portfolio ul li {
   float: left;
   line-height: 0;
@@ -236,34 +233,34 @@ article {
 }
 
 /* Logo SPIP */
-/* line 225, ../sass/perso.scss */
+/* line 222, ../sass/perso.scss */
 .spip_logos {
   margin-bottom: 20px;
 }
 
-/* line 229, ../sass/perso.scss */
+/* line 226, ../sass/perso.scss */
 .ui-widget {
   z-index: 1;
   width: 200px;
 }
 
 /* Cette parie de foundation brise les noix */
-/* line 235, ../sass/perso.scss */
+/* line 232, ../sass/perso.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
 
-/* line 239, ../sass/perso.scss */
+/* line 236, ../sass/perso.scss */
 .agenda {
   float: right;
 }
-/* line 241, ../sass/perso.scss */
+/* line 238, ../sass/perso.scss */
 .agenda ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 246, ../sass/perso.scss */
+/* line 243, ../sass/perso.scss */
 .agenda .evenement {
   border: 1px solid #0049a8;
   padding: 10px;
@@ -272,12 +269,12 @@ article {
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 252, ../sass/perso.scss */
+/* line 249, ../sass/perso.scss */
 .agenda .evenement p {
   margin: 0;
 }
 
-/* line 258, ../sass/perso.scss */
+/* line 255, ../sass/perso.scss */
 .formulaire_newsletter {
   border: none;
   padding: 0;
