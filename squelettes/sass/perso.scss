@@ -166,6 +166,11 @@ textarea {
 article {
   display: block;
   margin-bottom: 10px;
+
+  .ps {
+    font-style: italic;
+    font-size: 0.8em;
+  }
 }
 
 /* Formulaire Obligatoire. */

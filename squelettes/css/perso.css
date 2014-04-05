@@ -178,34 +178,39 @@ article {
   display: block;
   margin-bottom: 10px;
 }
+/* line 170, ../sass/perso.scss */
+article .ps {
+  font-style: italic;
+  font-size: 0.8em;
+}
 
 /* Formulaire Obligatoire. */
-/* line 172, ../sass/perso.scss */
+/* line 177, ../sass/perso.scss */
 .obligatoire {
   color: #FF0000;
 }
 
 /* Systeme d alert */
-/* line 177, ../sass/perso.scss */
+/* line 182, ../sass/perso.scss */
 .alerte {
   padding-bottom: 5px;
   -webkit-border-radius: 5px 5px;
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 180, ../sass/perso.scss */
+/* line 185, ../sass/perso.scss */
 .alerte h1 {
   font-size: 1em;
 }
 
 /* Footer du site */
-/* line 186, ../sass/perso.scss */
+/* line 191, ../sass/perso.scss */
 #pied {
   border: none;
   background: none;
 }
 
-/* line 191, ../sass/perso.scss */
+/* line 196, ../sass/perso.scss */
 #pied .citation {
   width: 477px;
   height: 156px;
@@ -220,12 +225,12 @@ article {
 }
 
 /* Les galerie d images */
-/* line 206, ../sass/perso.scss */
+/* line 211, ../sass/perso.scss */
 #documents_portfolio ul {
   margin: 0;
   list-style: none;
 }
-/* line 209, ../sass/perso.scss */
+/* line 214, ../sass/perso.scss */
 #documents_portfolio ul li {
   float: left;
   line-height: 0;
@@ -233,34 +238,34 @@ article {
 }
 
 /* Logo SPIP */
-/* line 222, ../sass/perso.scss */
+/* line 227, ../sass/perso.scss */
 .spip_logos {
   margin-bottom: 20px;
 }
 
-/* line 226, ../sass/perso.scss */
+/* line 231, ../sass/perso.scss */
 .ui-widget {
   z-index: 1;
   width: 200px;
 }
 
 /* Cette parie de foundation brise les noix */
-/* line 232, ../sass/perso.scss */
+/* line 237, ../sass/perso.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
 
-/* line 236, ../sass/perso.scss */
+/* line 241, ../sass/perso.scss */
 .agenda {
   float: right;
 }
-/* line 238, ../sass/perso.scss */
+/* line 243, ../sass/perso.scss */
 .agenda ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 243, ../sass/perso.scss */
+/* line 248, ../sass/perso.scss */
 .agenda .evenement {
   border: 1px solid #0049a8;
   padding: 10px;
@@ -269,12 +274,12 @@ article {
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 249, ../sass/perso.scss */
+/* line 254, ../sass/perso.scss */
 .agenda .evenement p {
   margin: 0;
 }
 
-/* line 255, ../sass/perso.scss */
+/* line 260, ../sass/perso.scss */
 .formulaire_newsletter {
   border: none;
   padding: 0;
