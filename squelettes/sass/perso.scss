@@ -168,8 +168,10 @@ article {
   margin-bottom: 10px;
 
   .ps {
-    font-style: italic;
-    font-size: 0.8em;
+    p {
+      font-style: italic;
+      font-size: 0.8em;
+    }
   }
 }
 
