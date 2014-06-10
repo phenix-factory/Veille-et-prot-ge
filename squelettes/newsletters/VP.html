@@ -112,7 +112,7 @@
 								<tr>
 									<td class="headerContent"
 									    style="border-collapse: collapse;color: #202020;font-family: Arial;font-size: 34px;font-weight: bold;line-height: 100%;padding: 0;text-align: center;vertical-align: middle;">
-										<!-- Module qui va chercher une image aléatoirement dans les slideshows -->                              
+										<!-- Module qui va chercher une image aléatoirement dans les slideshows -->
                                         <BOUCLE_image_header(SLIDES){par hasard}{0,1}>
                                             [(#LOGO_SLIDE|image_passe_partout{600,250}|image_recadre{600,250,center,transparent}|image_aplatir{jpg,#ffffff,75}
                                           |inserer_attribut{alt,''}
@@ -163,16 +163,16 @@
 												<td valign="top" style="border-collapse: collapse;">
 													<div
 														style="color: #505050;font-family: Arial;font-size: 14px;line-height: 150%;text-align: left;">
-                                                        
+
                                                         [<div class="date">(#DATE|affdate)</div>]
-                                                                                                                                            
+
 														<h2 class="#EDIT{titre} h2" style="color: #202020;display: block;font-family: Arial;font-size: 26px;font-weight: bold;line-height: 100%;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;text-align: left;">
 															<a href="#URL_ARTICLE">#TITRE</a></h2>
-                                                        [(#LOGO_ARTICLE|image_reduire{560}
+                                                        [<center>(#LOGO_ARTICLE|image_reduire{560}
                                                                  |inserer_attribut{alt,''}
                                                                  |inserer_attribut{border,'0'}
                                                                  |inserer_attribut{style,'margin: 0;padding: 0;max-width: 100%;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;'}
-                                                                 |inserer_attribut{class,logo})]                                             
+                                                                                                                          |inserer_attribut{class,logo})</center>]
 														[<div class="#EDIT{texte}">
                                                         (#TEXTE
                                                                 |couper{250}
