@@ -1,26 +1,16 @@
-/* line 15, ../sass/perso.scss */
+/* line 13, ../sass/perso.scss */
 body {
   font-size: 1em;
 }
 
 /* Les liens generaux */
-/* line 20, ../sass/perso.scss */
+/* line 18, ../sass/perso.scss */
 a {
   color: #136690;
 }
 
-/* line 24, ../sass/perso.scss */
-.clear {
-  clear: both;
-}
-
-/* line 28, ../sass/perso.scss */
-.row {
-  max-width: 100%;
-}
-
 /* Positionnement de la page */
-/* line 33, ../sass/perso.scss */
+/* line 23, ../sass/perso.scss */
 #page {
   margin-top: 0;
   width: 100%;
@@ -31,7 +21,7 @@ a {
 }
 
 /* Bordure generale */
-/* line 43, ../sass/perso.scss */
+/* line 33, ../sass/perso.scss */
 #border {
   border: 1px solid #000;
   border-top: none;
@@ -41,7 +31,7 @@ a {
 }
 
 /* Entete du site */
-/* line 52, ../sass/perso.scss */
+/* line 42, ../sass/perso.scss */
 #entete {
   padding: 0;
   position: relative;
@@ -49,7 +39,7 @@ a {
 }
 
 /* Logo */
-/* line 59, ../sass/perso.scss */
+/* line 49, ../sass/perso.scss */
 #logo_vp {
   position: absolute;
   top: 20px;
@@ -62,59 +52,35 @@ a {
   border-radius: 5px / 5px;
 }
 
-/* line 69, ../sass/perso.scss */
-#menu {
-  margin-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #262626;
-  -webkit-border-radius: 5px 5px;
-  -moz-border-radius: 5px / 5px;
-  border-radius: 5px / 5px;
-}
-/* line 81, ../sass/perso.scss */
-#menu li ul {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition-property: max-height;
-  -moz-transition-property: max-height;
-  -o-transition-property: max-height;
-  transition-property: max-height;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
-}
-/* line 88, ../sass/perso.scss */
-#menu li:hover > ul {
-  max-height: 500px;
+/* line 60, ../sass/perso.scss */
+#nav .columns {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* CSS general */
-/* line 96, ../sass/perso.scss */
+/* line 69, ../sass/perso.scss */
 h1 {
   font-size: 1.6em;
 }
 
-/* line 99, ../sass/perso.scss */
+/* line 72, ../sass/perso.scss */
 h2 {
   font-size: 1.4em;
 }
 
-/* line 102, ../sass/perso.scss */
+/* line 75, ../sass/perso.scss */
 h3 {
   font-size: 1.2em;
 }
 
-/* line 106, ../sass/perso.scss */
+/* line 79, ../sass/perso.scss */
 ul {
   margin-left: 30px;
   list-style-position: inside;
 }
 
-/* line 124, ../sass/perso.scss */
+/* line 97, ../sass/perso.scss */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -136,89 +102,89 @@ textarea {
 }
 
 /* Contenu */
-/* line 130, ../sass/perso.scss */
+/* line 103, ../sass/perso.scss */
 #contenu-principal {
   padding-top: 20px;
 }
 
-/* line 136, ../sass/perso.scss */
+/* line 109, ../sass/perso.scss */
 .page_sommaire #news a.right {
   font-size: 0.8em;
 }
-/* line 139, ../sass/perso.scss */
+/* line 112, ../sass/perso.scss */
 .page_sommaire #news .pagination {
   margin-right: 10px;
 }
-/* line 143, ../sass/perso.scss */
+/* line 116, ../sass/perso.scss */
 .page_sommaire #header_news {
   clear: both;
 }
-/* line 146, ../sass/perso.scss */
+/* line 119, ../sass/perso.scss */
 .page_sommaire #header_news a.right {
   font-size: 0.8em;
 }
-/* line 150, ../sass/perso.scss */
+/* line 123, ../sass/perso.scss */
 .page_sommaire #header_news h1 {
   font-size: 1.2em;
   padding-left: 0.9375em;
 }
-/* line 155, ../sass/perso.scss */
+/* line 128, ../sass/perso.scss */
 .page_sommaire #header_news #flash {
   color: #b11b15;
 }
 
-/* line 161, ../sass/perso.scss */
+/* line 134, ../sass/perso.scss */
 #news {
   margin-top: 10px;
 }
 
 /* Mise en page des articles */
-/* line 166, ../sass/perso.scss */
+/* line 139, ../sass/perso.scss */
 article {
   display: block;
   margin-bottom: 10px;
 }
-/* line 170, ../sass/perso.scss */
+/* line 143, ../sass/perso.scss */
 article .spip_logos {
   float: none;
 }
-/* line 173, ../sass/perso.scss */
+/* line 146, ../sass/perso.scss */
 article table {
   width: 100%;
 }
-/* line 178, ../sass/perso.scss */
+/* line 151, ../sass/perso.scss */
 article .ps p {
   font-style: italic;
   font-size: 0.8em;
 }
 
 /* Formulaire Obligatoire. */
-/* line 186, ../sass/perso.scss */
+/* line 159, ../sass/perso.scss */
 .obligatoire {
   color: #FF0000;
 }
 
 /* Systeme d alert */
-/* line 191, ../sass/perso.scss */
+/* line 164, ../sass/perso.scss */
 .alerte {
   padding-bottom: 5px;
   -webkit-border-radius: 5px 5px;
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 194, ../sass/perso.scss */
+/* line 167, ../sass/perso.scss */
 .alerte h1 {
   font-size: 1em;
 }
 
 /* Footer du site */
-/* line 200, ../sass/perso.scss */
+/* line 173, ../sass/perso.scss */
 #pied {
   border: none;
   background: none;
 }
 
-/* line 205, ../sass/perso.scss */
+/* line 178, ../sass/perso.scss */
 #pied .citation {
   width: 477px;
   height: 156px;
@@ -233,12 +199,12 @@ article .ps p {
 }
 
 /* Les galerie d images */
-/* line 220, ../sass/perso.scss */
+/* line 193, ../sass/perso.scss */
 #documents_portfolio ul {
   margin: 0;
   list-style: none;
 }
-/* line 223, ../sass/perso.scss */
+/* line 196, ../sass/perso.scss */
 #documents_portfolio ul li {
   float: left;
   line-height: 0;
@@ -246,34 +212,28 @@ article .ps p {
 }
 
 /* Logo SPIP */
-/* line 236, ../sass/perso.scss */
+/* line 205, ../sass/perso.scss */
 .spip_logos {
   margin-bottom: 20px;
 }
 
-/* line 240, ../sass/perso.scss */
-.ui-widget {
-  z-index: 1;
-  width: 200px;
-}
-
 /* Cette parie de foundation brise les noix */
-/* line 246, ../sass/perso.scss */
+/* line 210, ../sass/perso.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
 
-/* line 250, ../sass/perso.scss */
+/* line 214, ../sass/perso.scss */
 .agenda {
   float: right;
 }
-/* line 252, ../sass/perso.scss */
+/* line 216, ../sass/perso.scss */
 .agenda ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 257, ../sass/perso.scss */
+/* line 221, ../sass/perso.scss */
 .agenda .evenement {
   border: 1px solid #0049a8;
   padding: 10px;
@@ -282,12 +242,12 @@ article .ps p {
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 263, ../sass/perso.scss */
+/* line 227, ../sass/perso.scss */
 .agenda .evenement p {
   margin: 0;
 }
 
-/* line 269, ../sass/perso.scss */
+/* line 233, ../sass/perso.scss */
 .formulaire_newsletter {
   border: none;
   padding: 0;

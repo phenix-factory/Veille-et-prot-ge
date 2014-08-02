@@ -5,88 +5,57 @@ $color_link: #136690;
 $color_link_patte: #FFF;
 $bg_link_patte: #bfd3d7;
 
-
-
 @mixin border() {
-  border: 1px solid #000;
-  @include border-radius(5px, 5px);
+    border: 1px solid #000;
+    @include border-radius(5px, 5px);
 }
 
 body {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 /* Les liens generaux */
 a {
-  color: $color_link;
-}
-
-.clear {
-  clear: both;
-}
-
-.row {
-  max-width: 100%;
+    color: $color_link;
 }
 
 /* Positionnement de la page */
 #page {
-  margin-top: 0;
-  width: 100%;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0;
-  border: none;
+    margin-top: 0;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
 }
 
 /* Bordure generale */
 #border {
-  border: 1px solid #000;
-  border-top: none;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-bottom: 10px;
+    border: 1px solid #000;
+    border-top: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 10px;
 }
 
 /* Entete du site */
 #entete {
-  padding: 0;
-  position: relative;
-  border: none;
+    padding: 0;
+    position: relative;
+    border: none;
 }
 
 /* Logo */
 #logo_vp {
-  position: absolute;
-  top: 20px;
-  right: 60px;
-  background: rgba(255,255,255,0.5);
-  z-index: 6;
-  padding: 3px;
-  @include border-radius(5px, 5px);
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    background: rgba(255,255,255,0.5);
+    z-index: 6;
+    padding: 3px;
+    @include border-radius(5px, 5px);
 }
 
-#menu {
-  margin-top: 20px;
-  padding: {
-    left: 20px;
-    right: 20px;
-    top: 10px;
-    bottom: 10px;
-  }
-  border: 1px solid #262626;
-  @include border-radius(5px, 5px);
-
-  li {
-    ul {
-      max-height: 0;
-      overflow: hidden;
-      @include transition-property(max-height);
-      @include transition-duration(1s);
-    }
-
-    &:hover > ul {
-      max-height: 500px;
 #nav {
     .columns {
         padding: {
@@ -94,23 +63,22 @@ a {
             right: 0;
         }
     }
-
 }
 
 /* CSS general */
 h1 {
-  font-size: 1.6em;
+    font-size: 1.6em;
 }
 h2 {
-  font-size: 1.4em;
+    font-size: 1.4em;
 }
 h3 {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 ul {
-  margin-left: 30px;
-  list-style-position: inside;
+    margin-left: 30px;
+    list-style-position: inside;
 }
 
 input[type="text"],
@@ -127,151 +95,142 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea {
-  margin: 0;
-  @include border-radius(5px, 5px);
+    margin: 0;
+    @include border-radius(5px, 5px);
 }
 
 /* Contenu */
 #contenu-principal {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 .page_sommaire {
-  #news {
-    a.right {
-      font-size: 0.8em;
+    #news {
+        a.right {
+            font-size: 0.8em;
+        }
+        .pagination {
+            margin-right: 10px;
+        }
     }
-    .pagination {
-      margin-right: 10px;
-    }
-  }
-  #header_news {
-    clear: both;
+    #header_news {
+        clear: both;
 
-    a.right {
-      font-size: 0.8em;
-    }
+        a.right {
+            font-size: 0.8em;
+        }
 
-    h1 {
-      font-size: 1.2em;
-      padding-left: 0.9375em;
-    }
+        h1 {
+            font-size: 1.2em;
+            padding-left: 0.9375em;
+        }
 
-    #flash {
-      color: #b11b15;
+        #flash {
+            color: #b11b15;
+        }
     }
-  }
 }
 
 #news {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 /* Mise en page des articles */
 article {
-  display: block;
-  margin-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
 
-  .spip_logos {
-    float: none;
-  }
-  table {
-    width: 100%;
-  }
-
-  .ps {
-    p {
-      font-style: italic;
-      font-size: 0.8em;
+    .spip_logos {
+        float: none;
     }
-  }
+    table {
+        width: 100%;
+    }
+
+    .ps {
+        p {
+            font-style: italic;
+            font-size: 0.8em;
+        }
+    }
 }
 
 /* Formulaire Obligatoire. */
 .obligatoire {
-  color: #FF0000;
+    color: #FF0000;
 }
 
 /* Systeme d alert */
 .alerte {
-  padding-bottom: 5px;
-  @include border-radius(5px, 5px);
-  h1 {
-    font-size: 1em;
-  }
+    padding-bottom: 5px;
+    @include border-radius(5px, 5px);
+    h1 {
+        font-size: 1em;
+    }
 }
 
 /* Footer du site */
 #pied {
-  border: none;
-  background: none;
+    border: none;
+    background: none;
 }
 
 #pied .citation {
-  width: 477px;
-  height: 156px;
-  float: right;
-  background: url(img/citation.png) no-repeat right;
-  font-size: 1.4em;
-  padding-top: 50px;
-  padding-right: 160px;
-  padding-left: 30px;
-  text-align: right;
-  color: #878787;
+    width: 477px;
+    height: 156px;
+    float: right;
+    background: url(img/citation.png) no-repeat right;
+    font-size: 1.4em;
+    padding-top: 50px;
+    padding-right: 160px;
+    padding-left: 30px;
+    text-align: right;
+    color: #878787;
 }
 
 /* Les galerie d images */
 #documents_portfolio {
-  ul {
-    margin: 0;
-    list-style: none;
-    li {
-      float: left;
-      line-height: 0;
-      margin: 3px;
+    ul {
+        margin: 0;
+        list-style: none;
+        li {
+            float: left;
+            line-height: 0;
+            margin: 3px;
+        }
     }
-  }
-}
-
-a.spip_out, a.spip_glossaire {
-
 }
 
 /* Logo SPIP */
 .spip_logos {
-  margin-bottom: 20px;
-}
-
-.ui-widget {
-  z-index: 1;
-  width: 200px;
+    margin-bottom: 20px;
 }
 
 /* Cette parie de foundation brise les noix */
 [class*="column"] + [class*="column"]:last-child {
-  float: left;
+    float: left;
 }
 // Mise en page de l'agenda
 .agenda {
-  float: right;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .evenement {
-    border: 1px solid #0049a8;
-    padding: 10px;
-    margin-bottom: 5px;
-    @include border-radius(5px, 5px);
-
-    p {
-      margin: 0;
+    float: right;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
-  }
+    .evenement {
+        border: 1px solid #0049a8;
+        padding: 10px;
+        margin-bottom: 5px;
+        @include border-radius(5px, 5px);
+
+        p {
+            margin: 0;
+        }
+    }
 }
 
 .formulaire_newsletter {
-  border: none;
-  padding: 0;
+    border: none;
+    padding: 0;
 }
