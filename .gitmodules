@@ -1,0 +1,3 @@
+[submodule "plugins/Zoundation"]
+	path = plugins/Zoundation
+	url = git@github.com:phenix-factory/Zoundation.git
