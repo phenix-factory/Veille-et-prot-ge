@@ -59,7 +59,9 @@ define('_PCL_ZIP_RANGE', 200);
 // v 2.2 : introduction du parametre d'URL dest
 // v 2.3 : introduction du parametre d'URL range
 // v 2.4 : redirection par meta refresh au lieu de header Location
-define('_SPIP_LOADER_VERSION', '2.4.3');
+// v 2.5 : affichage de la version à installer, de la version déjà installée (si elle existe),
+//		   compatibilite PHP, loader obsolete
+define('_SPIP_LOADER_VERSION', '2.5.2');
 #
 #######################################################################
 
@@ -96,6 +98,86 @@ $langues = array (
 	'wa' => "walon",
 	'zh_tw' => "&#21488;&#28771;&#20013;&#25991;", // chinois taiwan (ecr. traditionnelle)
 );
+
+// Configuration des versions minimales de PHP en fonction des branches SPIP
+$versions_php = array(
+	'2.0' => '4.0.8',
+	'2.1' => '4.0.8',
+	'3.0' => '5.1.0',
+	'3.1' => '5.1.0',
+);
+
+// Url du fichier archivelist permettant de créer les zips de spip
+define('_URL_ARCHIVELIST', 'http://core.spip.org/projects/spip/repository/raw/archivelist.txt');
+
+// Url du fichier spip_loader permettant de tester sa version distante
+define('_URL_SPIP_LOADER', _URL_LOADER_DL . 'spip_loader.php');
+
+//
+// Renvoie un tableau des versions SPIP dont l'index correspond à au chemin du fichier zip tel
+// qu'utilisé par spip_loader
+//
+function lister_versions_spip() {
+
+	$versions = array();
+
+	// Récupération du fichier archivelist.txt du core
+	$archivelist = recuperer_page(_URL_ARCHIVELIST);
+	$contenu = explode("\n", $archivelist);
+
+	// on supprime les retours chariot
+	$contenu = array_filter($contenu, 'trim');
+	// on supprime les lignes vides
+	$contenu = array_filter($contenu);
+
+	if ($contenu) {
+		// On lit le fichier ligne par ligne et on
+		foreach($contenu as $ligne) {
+			if (substr($ligne,0,1) != '#') {
+				// C'est une ligne de definition d'un paquet :
+				$parametres = explode(';', $ligne);
+				// - et on extrait la version de spip du chemin svn
+				$arbo_svn = rtrim($parametres[0], '/');
+				$version = str_replace('spip-', '', basename($arbo_svn));
+				// - on separe calcul le nom complet du zip
+				$chemin = 'spip/' . $parametres[1] . '.zip';
+				// - on determine l'état de l'archive (stable, dev, archives)
+				$etat = substr($parametres[1], 0, strpos($parametres[1], '/'));
+				// Ajout au tableau des versions
+				$versions[$chemin] = array(
+					'version' => $version,
+					'etat' => $etat);
+			}
+		}
+	}
+
+	return $versions;
+}
+
+function branche_spip($version) {
+	$v = explode('.', $version);
+	$branche = $v[0] . '.' . (isset($v[1]) ? $v[1] : '0');
+	return $branche;
+}
+
+// faut il mettre à jour le spip_loader ?
+function spip_loader_necessite_maj() {
+	return version_compare(_SPIP_LOADER_VERSION, spip_loader_recupere_version(), '<');
+}
+
+// trouver le numéro de version du dernier spip_loader
+function spip_loader_recupere_version() {
+	static $version = null;
+	if (is_null($version)) {
+		$version = false;
+		$spip_loader = recuperer_page(_URL_SPIP_LOADER);
+		if (preg_match("/define\('_SPIP_LOADER_VERSION', '([0-9.]*)'\)/", $spip_loader, $m)) {
+			$version = $m[1];
+		}
+	}
+	return $version;
+}
+
 
 //
 // Traduction des textes de SPIP
@@ -443,9 +525,13 @@ function selectionner_langue($droits) {
 
 function debut_html($corps='', $hidden=array()) {
 
-	global $lang, $spip_lang_dir, $spip_lang_right;
+	global $lang, $spip_lang_dir, $spip_lang_right, $version_installee;
 
-	$titre = _TT('tradloader:titre', array('paquet'=>strtoupper(_NOM_PAQUET_ZIP)));
+  if ($version_installee)
+			$titre = _TT('tradloader:titre_maj', array('paquet'=>strtoupper(_NOM_PAQUET_ZIP)));
+		else
+			$titre = _TT('tradloader:titre', array('paquet'=>strtoupper(_NOM_PAQUET_ZIP)));
+
 	$css = $js = '';
 	foreach (explode(',', _SPIP_LOADER_EXTRA) as $fil) {
 		switch (strrchr($fil, '.')) {
@@ -477,41 +563,50 @@ function debut_html($corps='', $hidden=array()) {
 	<meta http-equiv='pragma' content='no-cache' />
 	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 	<style type='text/css'>
-		body {
-			background-color:white;
-			color:black;
-			margin:50px 0 0 0;
-		}
-		#main {
-			margin-left: auto;
-			margin-right: auto;
-			width:450px;
-		}
-		a {
-			text-decoration: none;
-			color: #E86519;
-		}
-		a:hover {
-			color:#FF9900;
-			text-decoration: underline;
-		}
-		a:visited {
-			color:#6E003A;
-		}
-		a:active {
-			color:#FF9900;
-		}
-		h1 {
-			font-family:Verdana ,Arial,Helvetica,sans-serif;
-			color:#970038;
-			display:inline;
-			font-size:120%;
-		}
-		h2 {
-			font-family: Verdana,Arial,Sans,sans-serif;
-			font-weigth: normal;
-			font-size: 100%;
-		}
+	body {
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:.9em;
+		color: #222;
+		background-color: #f8f7f3;
+	}
+	#main {
+		margin:5em auto;
+		padding:3em 2em;
+		background-color:#fff;
+		border-radius:2em;
+		box-shadow: 0 0 20px #666;
+		width:34em;
+	}
+	a {
+		color: #E86519;
+	}
+	a:hover {
+		color:#FF9900;
+	}
+	h1 {
+		color:#5F4267;
+		display:inline;
+		font-size:1.6em;
+	}
+	h2 {
+		font-weigth: normal;
+		font-size: 1.2em;
+	}
+	div {
+		line-height:140%;
+	}
+	div.progression {
+		margin-top:2em;
+		font-weight:bold;
+		font-size:1.4em;
+		text-align:center;
+	}
+	.bar {border:1px solid #aaa;}
+	.bar div {background:#aaa;height:1em;}
+	.version {background:#eee;margin:1em 0;padding:.5em;}
+	.version-courante {color:#888;}
+	.erreur {border-left:4px solid #f00; padding:1em 1em 1em 2em; background:#FCD4D4;}
+	.info {border-left:4px solid #FFA54A; padding:1em 1em 1em 2em; background:#FFEED9; margin:1em 0;}
 	</style>$css$js
 	</head>
 	<body>
@@ -520,11 +615,8 @@ function debut_html($corps='', $hidden=array()) {
 	"<div style='float:$spip_lang_right'>" .
 	menu_languesT($lang, $script, $hidden) .
 	"</div>
-	<div style='font-family:Georgia,Garamond,Times,serif; font-size:110%;'>
-	<h1>" .
-	$titre .
-	"</h1>" .
-	$corps .
+	<div>
+  <h1>" . $titre . "</h1>". $corps .
 	$hid .
 	"</div></form>";
 }
@@ -538,6 +630,7 @@ function fin_html()
 	<p style="text-align:right;font-size:x-small;">spip_loader '
 	. _SPIP_LOADER_VERSION
 	.'</p>
+  </div>
 	</body>
 	</html>
 	';
@@ -567,15 +660,15 @@ function touchCallBack($p_event, &$p_header)
 {
 	// bien extrait ?
 	if ($p_header['status'] == 'ok') {
-	    // allez, on touche le fichier, le @ est pour les serveurs sous Windows qui ne comprennent pas touch()
-	    @touch($p_header['filename']);
+		// allez, on touche le fichier, le @ est pour les serveurs sous Windows qui ne comprennent pas touch()
+		@touch($p_header['filename']);
 	}
 	return 1;
 }
 function microtime_float()
 {
-    list($usec, $sec) = explode(" ", microtime());
-    return ((float)$usec + (float)$sec);
+	list($usec, $sec) = explode(" ", microtime());
+	return ((float)$usec + (float)$sec);
 }
 
 function verifie_zlib_ok()
@@ -604,7 +697,7 @@ function verifie_zlib_ok()
 			}
 		}
 		if ($php){
-			  include $f;
+			include $f;
 		}
 	}
 	return true;
@@ -693,15 +786,18 @@ function spip_redirige_boucle($url, $progres = ""){
 	@ob_implicit_flush(1);
 	$corps = '<meta http-equiv="refresh" content="0;'.$url.'">';
 	if ($progres){
-		$corps .="<h2 style='text-align: center'>".round($progres*100)."%</h2>";
+		$corps .="<div class='progression'>".round($progres*100)."%</div>
+				  <div class='bar'><div style='width:".round($progres*100)."%'></div></div>
+				";
 	}
 	debut_html($corps);
 	fin_html();
 	exit;
 }
 
-function spip_presente_deballe($fichier, $paquet, $dest, $range)
-{
+function spip_presente_deballe($fichier, $paquet, $dest, $range) {
+	global $version_installee, $versions_php;
+
 	$nom = (_DEST_PAQUET_ZIP == '') ?
 			_TT('tradloader:ce_repertoire') :
 			(_TT('tradloader:du_repertoire').
@@ -712,11 +808,63 @@ function spip_presente_deballe($fichier, $paquet, $dest, $range)
 			'range' => $range,
 			'etape' => file_exists($fichier) ? 'fichier' : 'charger');
 
-	$corps = _TT('tradloader:texte_intro',
-		    array('paquet'=>strtoupper(_NOM_PAQUET_ZIP),'dest'=> $nom))
-	. "<div style='text-align:".$GLOBALS['spip_lang_right']."'>"
-	. '<input type="submit" value="'._TT('tradloader:bouton_suivant').'" />'
-	. '</div>';
+	// Version proposée à l'installation par défaut
+	$versions_spip = lister_versions_spip();
+	$version_future = 'SPIP ' . $versions_spip[_CHEMIN_FICHIER_ZIP]['version'];
+	if ($versions_spip[_CHEMIN_FICHIER_ZIP]['etat'] == 'dev')
+		$version_future .= '-' . $versions_spip[_CHEMIN_FICHIER_ZIP]['etat'];
+
+	if ($version_installee) {
+		// Mise à jour
+		$bloc_courant =
+			'<div class="version-courante">'
+			. _TT('tradloader:titre_version_courante')
+			. '<strong>'. 'SPIP ' . $version_installee .'</strong>'
+			. '</div>';
+		$bouton = _TT('tradloader:bouton_suivant_maj');
+	} else {
+		// Installation nue
+		$bloc_courant = '';
+		$bouton = _TT('tradloader:bouton_suivant');
+	}
+
+	// Détection d'une incompatibilité avec la version de PHP installée
+	$branche_future = branche_spip($versions_spip[_CHEMIN_FICHIER_ZIP]['version']);
+	$version_php_installee = phpversion();
+	$version_php_spip = $versions_php[$branche_future];
+	$php_incompatible = version_compare($version_php_spip, $version_php_installee, '>');
+
+	if ($php_incompatible) {
+		$bouton =
+			'<div class="erreur">'
+			. _TT('tradloader:echec_php', array('php1' => $version_php_installee, 'php2' => $version_php_spip))
+			. '</div>';
+	}
+	else {
+		$bouton =
+			"<div style='text-align:".$GLOBALS['spip_lang_right']."'>"
+			. '<input type="submit" value="' . $bouton . '" />'
+			. '</div>';
+	}
+
+	// Construction du corps
+	$corps =
+		_TT('tradloader:texte_intro', array('paquet'=>strtoupper(_NOM_PAQUET_ZIP),'dest'=> $nom))
+		. '<div class="version">'
+		. $bloc_courant
+		. '<div class="version-future">'
+		. _TT('tradloader:titre_version_future')
+		. '<strong>'. $version_future. '</strong>'
+		. '</div>'
+		. '</div>'
+		. $bouton;
+
+	if (spip_loader_necessite_maj()) {
+		$corps .=
+			"<div class='info'><a href='" . _URL_SPIP_LOADER . "'>"
+			. _TT('tradloader:spip_loader_maj', array('version' => spip_loader_recupere_version()))
+			. "</a></div>";
+	}
 
 	debut_html($corps, $hidden);
 	fin_html();
@@ -771,16 +919,18 @@ $GLOBALS['taux'] = 0; // calcul eventuel du taux de transfert+dezippage
 
 // En cas de reinstallation, verifier que le demandeur a les droits avant tout
 // definir _FILE_CONNECT a autre chose que machin.php si on veut pas
+$version_installee = '';
 if (@file_exists('ecrire/inc_version.php')) {
-	define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=accueil"); 
+	define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=accueil");
 	include_once 'ecrire/inc_version.php';
+	$version_installee = $GLOBALS['spip_version_branche'];
 	if (
 	  (defined('_FILE_CONNECT') AND _FILE_CONNECT AND strpos(_FILE_CONNECT, '.php'))
 	  OR defined('_SITES_ADMIN_MUTUALISATION')
 	) {
 		spip_loader_reinstalle();
 	}
-} else define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=install"); 
+} else define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=install");
 
 $droits = tester_repertoire();
 
@@ -800,8 +950,8 @@ if (!$GLOBALS['lang']) {
 	$q = $_SERVER['QUERY_STRING'];
 	echo _TT('tradloader:texte_preliminaire',
 			array('paquet'=>strtoupper(_NOM_PAQUET_ZIP),
-			      'href' => ('spip_loader.php' . ($q ? "?$q" : '')),
-			      'chmod'=>sprintf('%04o',$chmod)));
+					'href' => ('spip_loader.php' . ($q ? "?$q" : '')),
+					'chmod'=>sprintf('%04o',$chmod)));
 	fin_html();
 } elseif (!verifie_zlib_ok())
 	// on ne peut pas decompresser
@@ -815,4 +965,3 @@ else {
 		die("chemin incorrect $paquet");
 	else spip_deballe($paquet, $_REQUEST['etape'], $dest, intval($_REQUEST['range']));
 }
-?>
