@@ -6,9 +6,11 @@
         <INCLURE{fond=header/#ENV{type-page},env}>
       </div>
 
-      <div id="nav">
-        <INCLURE{fond=inclure/barre-nav,env}>
-      </div>
+      <nav id="nav" class="row">
+        <div class="#COLONNES{12, large}">
+          <INCLURE{fond=inclure/nav,env} />
+        </div>
+      </nav>
 
       <div id="conteneur" class="row">
         <div class="#COLONNES{#ARRAY{3, large, 3, medium}}">
@@ -23,14 +25,10 @@
 
     <div id="pied" class="row">
       <div class="[(#COLONNES{12, large})]">
-        <INCLURE{fond=inclure/pied,env}>
+        <INCLURE{fond=footer/#ENV{type-page},env}>
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-    $("#menu").menu();
-  </script>
 
   <!-- Piwik -->
   <script type="text/javascript">
