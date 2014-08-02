@@ -11,11 +11,11 @@
       </div>
 
       <div id="conteneur" class="row">
-        <div class="[(#COLONNES{3, large})] [(#COLONNES{3, medium})]">
-            <INCLURE{fond=extra1/#ENV{type-page},env}>
+        <div class="#COLONNES{#ARRAY{3, large, 3, medium}}">
+            <INCLURE{fond=colonne_1/#ENV{type-page},env}>
         </div>
 
-        <div id="contenu-principal" class="[(#COLONNES{9, large})] [(#COLONNES{9, medium})] [(#COLONNES{12, small})]">
+        <div id="contenu-principal" class="[(#COLONNES{#ARRAY{9, large, 9, medium, 12, small}})]">
           <INCLURE{fond=content/#ENV{type-page},env}{ajax}>
         </div>
       </div>
