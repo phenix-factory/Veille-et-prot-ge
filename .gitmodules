@@ -1,3 +1,9 @@
 [submodule "plugins/Zoundation"]
 	path = plugins/Zoundation
 	url = git@github.com:phenix-factory/Zoundation.git
+[submodule "plugins/courtjus"]
+	path = plugins/courtjus
+	url = git@github.com:phenix-factory/courtjus.git
+[submodule "plugins/spip_array_column"]
+	path = plugins/spip_array_column
+	url = git@github.com:phenix-factory/spip_array_column.git
