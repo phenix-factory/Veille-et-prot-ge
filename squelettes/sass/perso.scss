@@ -87,8 +87,13 @@ a {
 
     &:hover > ul {
       max-height: 500px;
+#nav {
+    .columns {
+        padding: {
+            left: 0;
+            right: 0;
+        }
     }
-  }
 
 }
 
