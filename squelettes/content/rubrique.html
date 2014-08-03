@@ -7,7 +7,9 @@
     <BOUCLE_article_rubrique(ARTICLES){id_rubrique} {par date} {inverse} {pagination}>
       <div class="row">
         <div class="#COLONNES{#ARRAY{4,large}}">
-          #LOGO_ARTICLE
+          [(#LOGO_ARTICLE
+          |image_passe_partout{320,160}
+          |image_recadre{320,160})]
         </div>
         <div class="#COLONNES{#ARRAY{8,large}}">
           <h2>
@@ -27,7 +29,9 @@
     <BOUCLE_site_rubrique(SITES){id_rubrique} {par date} {inverse} {pagination}>
       <div class="row">
         <div class="#COLONNES{#ARRAY{4,large}}">
-          #LOGO_SITE
+          [(#LOGO_SITE
+          |image_passe_partout{320,160}
+          |image_recadre{320,160})]
         </div>
         <div class="#COLONNES{#ARRAY{8,large}}">
           <h2>
