@@ -1,0 +1,46 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+  <h1>#TITRE</h1>
+
+  #TEXTE
+
+  <B_article_rubrique>
+    <BOUCLE_article_rubrique(ARTICLES){id_rubrique} {par date} {inverse} {pagination}>
+      <div class="row">
+        <div class="#COLONNES{#ARRAY{4,large}}">
+          #LOGO_ARTICLE
+        </div>
+        <div class="#COLONNES{#ARRAY{8,large}}">
+          <h2>
+            <a href="#URL_ARTICLE" [title="(#TITRE|attribut_html)"]>#TITRE</a>
+          </h2>
+
+          #INTRODUCTION
+
+          <a href="#URL_ARTICLE" [title="(#TITRE|attribut_html)"] class="right">Lire la suite</a>
+        </div>
+      </div>
+    </BOUCLE_article_rubrique>
+    [<p class="pagination">(#PAGINATION)</p>]
+  </B_article_rubrique>
+
+  <B_site_rubrique>
+    <BOUCLE_site_rubrique(SITES){id_rubrique} {par date} {inverse} {pagination}>
+      <div class="row">
+        <div class="#COLONNES{#ARRAY{4,large}}">
+          #LOGO_SITE
+        </div>
+        <div class="#COLONNES{#ARRAY{8,large}}">
+          <h2>
+            <a href="#URL_SITE" [title="(#TITRE|attribut_html)"]>#NOM_SITE</a>
+          </h2>
+
+          #DESCRIPTIF
+
+          <a href="#URL_SITE" [title="(#TITRE|attribut_html)"] class="right">Voir le site</a>
+        </div>
+      </div>
+    </BOUCLE_site_rubrique>
+    [<p class="pagination">(#PAGINATION)</p>]
+  </B_site_rubrique>
+
+</BOUCLE_rubrique>
