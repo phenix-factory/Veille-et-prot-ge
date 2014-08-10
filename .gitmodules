@@ -7,3 +7,6 @@
 [submodule "plugins/spip_array_column"]
 	path = plugins/spip_array_column
 	url = https://github.com/phenix-factory/spip_array_column.git
+[submodule "plugins/slick-spip"]
+	path = plugins/slick-spip
+	url = git@github.com:phenix-factory/slick-spip.git
