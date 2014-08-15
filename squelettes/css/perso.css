@@ -80,20 +80,8 @@ ul {
   list-style-position: inside;
 }
 
-/* line 97, ../sass/perso.scss */
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
+/* line 85, ../sass/perso.scss */
+input,
 textarea {
   margin: 0;
   -webkit-border-radius: 5px 5px;
@@ -102,138 +90,101 @@ textarea {
 }
 
 /* Contenu */
-/* line 103, ../sass/perso.scss */
+/* line 91, ../sass/perso.scss */
 #contenu-principal {
   padding-top: 20px;
 }
 
-/* line 109, ../sass/perso.scss */
+/* line 97, ../sass/perso.scss */
 .page_sommaire #news a.right {
   font-size: 0.8em;
 }
-/* line 112, ../sass/perso.scss */
+/* line 100, ../sass/perso.scss */
 .page_sommaire #news .pagination {
   margin-right: 10px;
 }
-/* line 116, ../sass/perso.scss */
+/* line 104, ../sass/perso.scss */
 .page_sommaire #header_news {
   clear: both;
 }
-/* line 119, ../sass/perso.scss */
+/* line 107, ../sass/perso.scss */
 .page_sommaire #header_news a.right {
   font-size: 0.8em;
 }
-/* line 123, ../sass/perso.scss */
+/* line 111, ../sass/perso.scss */
 .page_sommaire #header_news h1 {
   font-size: 1.2em;
   padding-left: 0.9375em;
 }
-/* line 128, ../sass/perso.scss */
+/* line 116, ../sass/perso.scss */
 .page_sommaire #header_news #flash {
   color: #b11b15;
 }
 
-/* line 134, ../sass/perso.scss */
+/* line 122, ../sass/perso.scss */
 #news {
   margin-top: 10px;
 }
 
 /* Mise en page des articles */
-/* line 139, ../sass/perso.scss */
+/* line 127, ../sass/perso.scss */
 article {
   display: block;
   margin-bottom: 10px;
 }
-/* line 143, ../sass/perso.scss */
+/* line 131, ../sass/perso.scss */
 article .spip_logos {
   float: none;
 }
-/* line 146, ../sass/perso.scss */
+/* line 134, ../sass/perso.scss */
 article table {
   width: 100%;
 }
-/* line 151, ../sass/perso.scss */
+/* line 139, ../sass/perso.scss */
 article .ps p {
   font-style: italic;
   font-size: 0.8em;
 }
 
 /* Formulaire Obligatoire. */
-/* line 159, ../sass/perso.scss */
+/* line 147, ../sass/perso.scss */
 .obligatoire {
   color: #FF0000;
 }
 
 /* Systeme d alert */
-/* line 164, ../sass/perso.scss */
+/* line 152, ../sass/perso.scss */
 .alerte {
   padding-bottom: 5px;
   -webkit-border-radius: 5px 5px;
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 167, ../sass/perso.scss */
+/* line 155, ../sass/perso.scss */
 .alerte h1 {
   font-size: 1em;
 }
 
 /* Footer du site */
-/* line 173, ../sass/perso.scss */
+/* line 161, ../sass/perso.scss */
 #pied {
   border: none;
   background: none;
 }
 
-/* line 178, ../sass/perso.scss */
-#pied .citation {
-  width: 477px;
-  height: 156px;
-  float: right;
-  background: url(img/citation.png) no-repeat right;
-  font-size: 1.4em;
-  padding-top: 50px;
-  padding-right: 160px;
-  padding-left: 30px;
-  text-align: right;
-  color: #878787;
-}
-
-/* Les galerie d images */
-/* line 193, ../sass/perso.scss */
-#documents_portfolio ul {
-  margin: 0;
-  list-style: none;
-}
-/* line 196, ../sass/perso.scss */
-#documents_portfolio ul li {
-  float: left;
-  line-height: 0;
-  margin: 3px;
-}
-
 /* Logo SPIP */
-/* line 205, ../sass/perso.scss */
+/* line 167, ../sass/perso.scss */
 .spip_logos {
   margin-bottom: 20px;
 }
 
-/* Cette parie de foundation brise les noix */
-/* line 210, ../sass/perso.scss */
-[class*="column"] + [class*="column"]:last-child {
-  float: left;
-}
-
-/* line 214, ../sass/perso.scss */
-.agenda {
-  float: right;
-}
-/* line 216, ../sass/perso.scss */
+/* line 173, ../sass/perso.scss */
 .agenda ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 221, ../sass/perso.scss */
+/* line 179, ../sass/perso.scss */
 .agenda .evenement {
   border: 1px solid #0049a8;
   padding: 10px;
@@ -242,17 +193,26 @@ article .ps p {
   -moz-border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
-/* line 227, ../sass/perso.scss */
+/* line 185, ../sass/perso.scss */
 .agenda .evenement p {
   margin: 0;
 }
 
-/* line 233, ../sass/perso.scss */
+/* line 191, ../sass/perso.scss */
 .formulaire_newsletter {
   border: none;
   padding: 0;
 }
-/* line 236, ../sass/perso.scss */
+/* line 194, ../sass/perso.scss */
 .formulaire_newsletter ul {
   margin-left: 0;
+}
+
+/* line 199, ../sass/perso.scss */
+#slick {
+  margin-bottom: 0;
+}
+/* line 201, ../sass/perso.scss */
+#slick .slick-prev:before, #slick .slick-next:before {
+  color: #000;
 }
