@@ -81,19 +81,7 @@ ul {
     list-style-position: inside;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
+input,
 textarea {
     margin: 0;
     @include border-radius(5px, 5px);
@@ -175,49 +163,19 @@ article {
     background: none;
 }
 
-#pied .citation {
-    width: 477px;
-    height: 156px;
-    float: right;
-    background: url(img/citation.png) no-repeat right;
-    font-size: 1.4em;
-    padding-top: 50px;
-    padding-right: 160px;
-    padding-left: 30px;
-    text-align: right;
-    color: #878787;
-}
-
-/* Les galerie d images */
-#documents_portfolio {
-    ul {
-        margin: 0;
-        list-style: none;
-        li {
-            float: left;
-            line-height: 0;
-            margin: 3px;
-        }
-    }
-}
-
 /* Logo SPIP */
 .spip_logos {
     margin-bottom: 20px;
 }
 
-/* Cette parie de foundation brise les noix */
-[class*="column"] + [class*="column"]:last-child {
-    float: left;
-}
 // Mise en page de l'agenda
 .agenda {
-    float: right;
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
     }
+
     .evenement {
         border: 1px solid #0049a8;
         padding: 10px;
@@ -236,6 +194,7 @@ article {
     ul {
         margin-left: 0;
     }
+}
 
 #slick {
     margin-bottom: 0;
