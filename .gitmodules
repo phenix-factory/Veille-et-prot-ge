@@ -9,4 +9,4 @@
 	url = https://github.com/phenix-factory/spip_array_column.git
 [submodule "plugins/slick-spip"]
 	path = plugins/slick-spip
-	url = https://github.com/phenix-factory/slick-spip.git
+	url = git@github.com:phenix-factory/slick-spip.git
